@@ -3,12 +3,15 @@ title = "MathAgape" #显示在标签页的那个字
 languageCode = "en-us" 
 theme = "mainroad"
 
-# summaryLength = 10 #自动摘要
-
 [[menu.main]]
   name = "Web Dev"
   url = "/categories/web-dev/"
   weight = 10
+
+[[menu.main]]
+  name = "Tech Tips"
+  url = "/categories/tech-tips/"
+  weight = 20
 
 [Params.logo]
   image = false
