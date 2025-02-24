@@ -1,4 +1,4 @@
-baseurl = "https://mathagape.github.io/blog/"
+baseurl = "https://mathagape.com/"
 title = "MathAgape" #显示在标签页的那个字
 languageCode = "en-us" 
 theme = "mainroad"
@@ -31,8 +31,8 @@ theme = "mainroad"
   widgets = ["categories", "taglist", "social"]
 
 # [[Params.widgets.social.custom]] #自定义链接
-#  title = "Youtube"
-#  url = "https://youtube.com/user/username"
+#  title = "4000x4000x4000@gmail.com"
+#  url = "4000x4000x4000@gmail.com"
 #  icon = false
 
 [markup]

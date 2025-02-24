@@ -2,46 +2,46 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>MathAgape</title>
-    <link>http://localhost:1313/blog/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on MathAgape</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 24 Feb 2025 20:53:36 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo × LaTeX 网页数学公式渲染</title>
-      <link>http://localhost:1313/blog/posts/hugo-latex/</link>
+      <link>http://localhost:1313/posts/hugo-latex/</link>
       <pubDate>Mon, 24 Feb 2025 20:53:36 +0800</pubDate>
-      <guid>http://localhost:1313/blog/posts/hugo-latex/</guid>
-      <description>&lt;p&gt;学会基本的 Hugo 本地建站和 GitHub Pages 部署之后，对于数学爱好者来说，最重要的就是让网页实现数学公式渲染。&#xA;我选择使用 &lt;strong&gt;MathJax&lt;/strong&gt; 这款 JavaScript显示引擎，支持渲染 LaTeX 数学标记。&#xA;涉及修改主题，附&lt;strong&gt;Fork 主题并替换子模块&lt;/strong&gt;教程。&lt;/p&gt;</description>
+      <guid>http://localhost:1313/posts/hugo-latex/</guid>
+      <description>&lt;p&gt;学会基本的 Hugo 本地建站和 GitHub Pages 部署之后，对于数学爱好者来说，最重要的就是让网页实现数学公式渲染。&#xA;我选择使用 &lt;strong&gt;JavaScript显示引擎 MathJax&lt;/strong&gt;，支持&lt;strong&gt;渲染 LaTeX 数学公式&lt;/strong&gt;。&#xA;涉及修改主题，附&lt;strong&gt;Fork 主题并替换子模块&lt;/strong&gt;教程。&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Hugo × Github Pages 自动化部署</title>
-      <link>http://localhost:1313/blog/posts/hugo-githubpages/</link>
+      <title>Hugo × GitHub Pages 自动化部署</title>
+      <link>http://localhost:1313/posts/hugo-githubpages/</link>
       <pubDate>Sun, 23 Feb 2025 19:17:10 +0800</pubDate>
-      <guid>http://localhost:1313/blog/posts/hugo-githubpages/</guid>
-      <description>&lt;p&gt;当你已经知道如何用 Hugo 完成本地建站，接下来就可以将它部署到互联网上了！&#xA;&lt;strong&gt;GitHub Pages&lt;/strong&gt; 托管是最为简单的办法之一，无需购买服务器，快捷、免费、稳定，尤其是 &lt;strong&gt;GitHub Actions&lt;/strong&gt; 自动化部署功能特别方便！&lt;/p&gt;</description>
+      <guid>http://localhost:1313/posts/hugo-githubpages/</guid>
+      <description>&lt;p&gt;当你已经知道如何用 Hugo 完成本地建站，接下来就可以将它部署到互联网上了！&#xA;&lt;strong&gt;GitHub Pages 托管&lt;/strong&gt;是最为简单的办法之一，无需购买服务器，快捷、免费、稳定，尤其是 &lt;strong&gt;GitHub Actions 自动化部署&lt;/strong&gt; 功能特别方便！&lt;/p&gt;</description>
     </item>
     <item>
       <title>Hugo 本地一步建站</title>
-      <link>http://localhost:1313/blog/posts/hugo-start/</link>
+      <link>http://localhost:1313/posts/hugo-start/</link>
       <pubDate>Sun, 23 Feb 2025 17:54:22 +0800</pubDate>
-      <guid>http://localhost:1313/blog/posts/hugo-start/</guid>
-      <description>&lt;p&gt;本站使用 Hugo + GitHub Pages 搭建。&#xA;Hugo 是一个基于 Go 语言的&lt;strong&gt;静态网站生成器&lt;/strong&gt;。只需挑选一款喜欢的&lt;strong&gt;主题&lt;/strong&gt;，具备一点 &lt;strong&gt;git&lt;/strong&gt; 基础，就能在几分钟内轻松完成本地建站。&lt;/p&gt;</description>
+      <guid>http://localhost:1313/posts/hugo-start/</guid>
+      <description>&lt;p&gt;本站使用 Hugo + GitHub Pages 搭建。&#xA;&lt;strong&gt;Hugo&lt;/strong&gt; 是一个基于 Go 语言的&lt;strong&gt;静态网站生成器&lt;/strong&gt;。只需挑选一款喜欢的&lt;strong&gt;主题&lt;/strong&gt;，具备一点 &lt;strong&gt;git&lt;/strong&gt; 基础，就能在几分钟内轻松完成本地建站。&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Claude × Typst：数学公式图像识别</title>
-      <link>http://localhost:1313/blog/posts/typst-claude/</link>
+      <title>Claude × Typst 数学公式图像识别</title>
+      <link>http://localhost:1313/posts/typst-claude/</link>
       <pubDate>Sat, 22 Feb 2025 18:15:39 +0800</pubDate>
-      <guid>http://localhost:1313/blog/posts/typst-claude/</guid>
-      <description>&lt;p&gt;识别图片中的数学公式为 LaTeX 代码，我经常使用诸如 ChatGPT 的大语言模型（LLM），从此告别昂贵的 Mathpix。&#xA;但如果是要转化为 Typst 代码，ChatGPT 的表现就非常糟糕了；遂尝试 &lt;strong&gt;Claude&lt;/strong&gt; ，效果奇佳！懒人写 Typst 有福了！&#xA;附&lt;strong&gt;国外短信接码平台&lt;/strong&gt;使用教程，解决国内手机号无法注册 Claude 的问题。&lt;/p&gt;</description>
+      <guid>http://localhost:1313/posts/typst-claude/</guid>
+      <description>&lt;p&gt;识别图片中的数学公式为 LaTeX 代码，我经常使用诸如 ChatGPT 的大语言模型（LLM），从此告别昂贵的 Mathpix。&#xA;但如果是要转化为 &lt;strong&gt;Typst&lt;/strong&gt; 代码，&lt;strong&gt;ChatGPT 的表现非常糟糕&lt;/strong&gt;；遂尝试 &lt;strong&gt;Claude&lt;/strong&gt; ，效果奇佳！懒人写 Typst 有福了！&#xA;附&lt;strong&gt;国外短信接码平台&lt;/strong&gt;使用教程，解决国内手机号无法注册 Claude 的问题。&lt;/p&gt;</description>
     </item>
     <item>
       <title>解决使用 Git 的网络问题（国内）</title>
-      <link>http://localhost:1313/blog/posts/git-network-issues/</link>
+      <link>http://localhost:1313/posts/git-network-issues/</link>
       <pubDate>Sat, 22 Feb 2025 09:06:36 +0800</pubDate>
-      <guid>http://localhost:1313/blog/posts/git-network-issues/</guid>
-      <description>&lt;p&gt;已经使用了 VPN ，浏览器也已经可以顺利上网了，但在终端使用 git 命令总遇到网络问题，非常不方便。但只需进行以下两项设置，就能在愉快使用 git 了！&lt;/p&gt;</description>
+      <guid>http://localhost:1313/posts/git-network-issues/</guid>
+      <description>&lt;p&gt;已经使用了 &lt;strong&gt;VPN&lt;/strong&gt; ，浏览器也已经可以顺利上网了，但在&lt;strong&gt;终端&lt;/strong&gt;使用 git 命令总遇到网络问题，非常不方便。但只需进行以下两项网络设置，就能在愉快使用 &lt;strong&gt;git&lt;/strong&gt; 了！&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

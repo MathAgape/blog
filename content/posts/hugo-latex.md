@@ -6,7 +6,7 @@ tags = ["Hugo", "Git", "LaTeX"]
 +++
 
 学会基本的 Hugo 本地建站和 GitHub Pages 部署之后，对于数学爱好者来说，最重要的就是让网页实现数学公式渲染。
-我选择使用 **MathJax** 这款 JavaScript显示引擎，支持渲染 LaTeX 数学标记。
+我选择使用 **JavaScript显示引擎 MathJax**，支持**渲染 LaTeX 数学公式**。
 涉及修改主题，附**Fork 主题并替换子模块**教程。
 
 <!--more-->

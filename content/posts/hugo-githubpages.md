@@ -1,12 +1,12 @@
 +++
 date = '2025-02-23T19:17:10+08:00'
-title = 'Hugo × Github Pages 自动化部署'
+title = 'Hugo × GitHub Pages 自动化部署'
 categories = ["Web-Dev"]
 tags = ["Hugo", "Git"]
 +++
 
 当你已经知道如何用 Hugo 完成本地建站，接下来就可以将它部署到互联网上了！
-**GitHub Pages** 托管是最为简单的办法之一，无需购买服务器，快捷、免费、稳定，尤其是 **GitHub Actions** 自动化部署功能特别方便！
+**GitHub Pages 托管**是最为简单的办法之一，无需购买服务器，快捷、免费、稳定，尤其是 **GitHub Actions 自动化部署** 功能特别方便！
 
 <!--more-->
 

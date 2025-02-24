@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>LLM on MathAgape</title>
-    <link>http://localhost:1313/blog/tags/llm/</link>
+    <link>http://localhost:1313/tags/llm/</link>
     <description>Recent content in LLM on MathAgape</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 22 Feb 2025 18:15:39 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/blog/tags/llm/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/llm/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Claude × Typst：数学公式图像识别</title>
-      <link>http://localhost:1313/blog/posts/typst-claude/</link>
+      <title>Claude × Typst 数学公式图像识别</title>
+      <link>http://localhost:1313/posts/typst-claude/</link>
       <pubDate>Sat, 22 Feb 2025 18:15:39 +0800</pubDate>
-      <guid>http://localhost:1313/blog/posts/typst-claude/</guid>
-      <description>&lt;p&gt;识别图片中的数学公式为 LaTeX 代码，我经常使用诸如 ChatGPT 的大语言模型（LLM），从此告别昂贵的 Mathpix。&#xA;但如果是要转化为 Typst 代码，ChatGPT 的表现就非常糟糕了；遂尝试 &lt;strong&gt;Claude&lt;/strong&gt; ，效果奇佳！懒人写 Typst 有福了！&#xA;附&lt;strong&gt;国外短信接码平台&lt;/strong&gt;使用教程，解决国内手机号无法注册 Claude 的问题。&lt;/p&gt;</description>
+      <guid>http://localhost:1313/posts/typst-claude/</guid>
+      <description>&lt;p&gt;识别图片中的数学公式为 LaTeX 代码，我经常使用诸如 ChatGPT 的大语言模型（LLM），从此告别昂贵的 Mathpix。&#xA;但如果是要转化为 &lt;strong&gt;Typst&lt;/strong&gt; 代码，&lt;strong&gt;ChatGPT 的表现非常糟糕&lt;/strong&gt;；遂尝试 &lt;strong&gt;Claude&lt;/strong&gt; ，效果奇佳！懒人写 Typst 有福了！&#xA;附&lt;strong&gt;国外短信接码平台&lt;/strong&gt;使用教程，解决国内手机号无法注册 Claude 的问题。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

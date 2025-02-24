@@ -6,7 +6,7 @@ tags = ["Hugo", "Git"]
 +++
 
 本站使用 Hugo + GitHub Pages 搭建。
-Hugo 是一个基于 Go 语言的**静态网站生成器**。只需挑选一款喜欢的**主题**，具备一点 **git** 基础，就能在几分钟内轻松完成本地建站。
+**Hugo** 是一个基于 Go 语言的**静态网站生成器**。只需挑选一款喜欢的**主题**，具备一点 **git** 基础，就能在几分钟内轻松完成本地建站。
 
 <!--more-->
 
@@ -42,7 +42,7 @@ winget install Hugo.Hugo.Extended
 
 访问[Hugo 官方主题库](https://themes.gohugo.io/)，挑选一个适合自己需求的主题。
 
-我选择了[Mainroad](https://themes.gohugo.io/themes/mainroad/)这款主题。
+我选择了 [Mainroad](https://themes.gohugo.io/themes/mainroad/) 这款主题。
 
 ---
 
