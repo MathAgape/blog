@@ -2,7 +2,6 @@ baseurl = "https://mathagape.github.io/blog/"
 title = "MathAgape" #显示在标签页的那个字
 languageCode = "en-us" 
 theme = "mainroad"
-relativeURLs = true
 
 # summaryLength = 10 #自动摘要
 
