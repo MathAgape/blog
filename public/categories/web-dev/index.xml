@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Web-Dev on MathAgape</title>
-    <link>//localhost:1313/categories/web-dev/</link>
+    <link>http://localhost:1313/blog/categories/web-dev/</link>
     <description>Recent content in Web-Dev on MathAgape</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 23 Feb 2025 19:17:10 +0800</lastBuildDate>
-    <atom:link href="//localhost:1313/categories/web-dev/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/blog/categories/web-dev/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Github Pages 自动化部署</title>
-      <link>//localhost:1313/posts/hugo-githubpages/</link>
+      <link>http://localhost:1313/blog/posts/hugo-githubpages/</link>
       <pubDate>Sun, 23 Feb 2025 19:17:10 +0800</pubDate>
-      <guid>//localhost:1313/posts/hugo-githubpages/</guid>
+      <guid>http://localhost:1313/blog/posts/hugo-githubpages/</guid>
       <description>&lt;p&gt;当你已经知道如何用 Hugo 完成本地建站，接下来就可以将它部署到互联网上了！&#xA;&lt;strong&gt;GitHub Pages&lt;/strong&gt; 托管是最为简单的办法之一，无需购买服务器，快捷、免费、稳定，尤其是 &lt;strong&gt;GitHub Actions&lt;/strong&gt; 自动化部署功能特别方便！&lt;/p&gt;</description>
     </item>
     <item>
       <title>Hugo 本地建站</title>
-      <link>//localhost:1313/posts/hugo-start/</link>
+      <link>http://localhost:1313/blog/posts/hugo-start/</link>
       <pubDate>Sun, 23 Feb 2025 17:54:22 +0800</pubDate>
-      <guid>//localhost:1313/posts/hugo-start/</guid>
+      <guid>http://localhost:1313/blog/posts/hugo-start/</guid>
       <description>&lt;p&gt;本站使用 Hugo + GitHub Pages 搭建。&#xA;Hugo 是一个基于 Go 语言的&lt;strong&gt;静态网站生成器&lt;/strong&gt;。只需挑选一款喜欢的&lt;strong&gt;主题&lt;/strong&gt;，具备一点 &lt;strong&gt;git&lt;/strong&gt; 基础，就能在几分钟内轻松完成本地建站。&lt;/p&gt;</description>
     </item>
   </channel>
