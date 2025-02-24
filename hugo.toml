@@ -1,0 +1,37 @@
+baseurl = "http://localhost:1313/"
+title = "MathAgape" #显示在标签页的那个字
+languageCode = "en-us" 
+theme = "mainroad"
+
+[Params.logo]
+  image = false
+  title = "MathAgape's Blog" #显示在网页顶端的那个字
+  subtitle = "Mathematics, Computer Science, and Philosophy Study Notes."
+
+[Params.style.vars]
+  highlightColor = "#e22d30" #subtitle、subtitle下的装饰线、正文链接字颜色、鼠标略过标题颜色
+
+[Params]
+  post_meta = ["author", "date", "categories", "translations"] #显示文章的日期等信息，这里不要随便加东西，尝试加tag会出错
+
+[Params.sidebar] #显示边栏
+  home = "right"
+  list = "right"
+  single = "right"
+  widgets = ["categories", "taglist", "social"]
+
+[[Params.widgets.social.custom]] #自定义链接
+  title = "Youtube"
+  url = "https://youtube.com/user/username"
+  icon = false
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['\[', '\]'], ['$$', '$$']]
+          inline = [['\(', '\)']]
+[params]
+  math = true

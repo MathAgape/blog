@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>从零开始的 Hugo 本地建站 - MathAgape</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="/css/style.css">
+	
+
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo">
+		<a class="logo__link" href="/" title="MathAgape&#39;s Blog" rel="home">
+			<div class="logo__item logo__text">
+					<div class="logo__title">MathAgape&#39;s Blog</div>
+					<div class="logo__tagline">Mathematics, Computer Science, and Philosophy Study Notes.</div>
+				</div>
+		</a>
+	</div>
+		<div class="divider"></div>
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">从零开始的 Hugo 本地建站</h1>
+			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2025-02-23T17:54:22&#43;08:00">February 23, 2025</time></div></div>
+		</header>
+		<div class="content post__content clearfix">
+			<ul>
+<li>
+<p>系统：Windows 11</p>
+</li>
+<li>
+<p>终端：PowerShell 7</p>
+</li>
+<li>
+<p>静态网站生成器：hugo (extended)</p>
+</li>
+<li>
+<p>编辑器：VS Code</p>
+</li>
+<li>
+<p>Hugo 官方文档参考：<a href="https://gohugo.io/getting-started/quick-start/">Quick start</a></p>
+</li>
+</ul>
+<h2 id="注意">注意</h2>
+<ul>
+<li>如果你是 Windows 用户，务必使用 <strong>PowerShell 7</strong>。</li>
+<li>务必要安装 hugo (extended)。</li>
+</ul>
+<p>不遵循以上两点，亲测会遇到 bug。</p>
+<h1 id="安装-hugo">安装 Hugo</h1>
+<p>打开<strong>终端</strong>，使用一下命令即可安装 Hugo：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>winget install Hugo.Hugo.Extended
+</span></span></code></pre></div><p>安装完成后，可用<code>PowerShell hugo version</code>验证。</p>
+<p>更多安装方式，可参考官方文档：<a href="https://gohugo.io/installation/windows/">Install Hugo on Windows</a></p>
+<h1 id="挑选主题">挑选主题</h1>
+<p>访问<a href="https://themes.gohugo.io/">Hugo 官方主题库</a>，挑选一个适合自己需求的主题。</p>
+<p>基于我对搜索和 LaTeX 的需求，我选择了<a href="https://themes.gohugo.io/themes/hugo-theme-relearn/">Relearn</a>这款主题。</p>
+<h1 id="生成网站">生成网站</h1>
+<p>打开<strong>终端</strong>，先进入要本地建站的目录，例如<code>cd C:\hugo</code>。</p>
+<p>使用一下命令即一步建站：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>hugo new site my-new-site
+</span></span><span style="display:flex;"><span>cd my-new-site
+</span></span><span style="display:flex;"><span>git init
+</span></span><span style="display:flex;"><span>git submodule add https<span style="color:#960050;background-color:#1e0010">:</span>//github.com/McShelby/hugo-theme-relearn.git themes/hugo-theme-relearn
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;theme = &#39;hugo-theme-relearn&#39;&#34;</span> &gt;&gt; hugo.toml
+</span></span><span style="display:flex;"><span>hugo server
+</span></span></code></pre></div><p>按住 ctrl ，点击生成的地址（形如http://localhost:1313/），即可预览网站效果。
+按 ctrl+c ，即可停止开发服务器的运行。</p>
+<h3 id="小知识httplocalhost1313是什么">小知识：http://localhost:1313/是什么？</h3>
+<p>http://localhost:1313/这个地址叫做 <strong>本地开发服务器地址（Localhost Address）</strong>，它是 <strong>Hugo 本地服务器</strong> 启动后提供的一个访问网址。具体来说：</p>
+<ul>
+<li><strong>localhost</strong>：表示你的本机（即你的电脑）。相当于<strong>127.0.0.1</strong>，是一个特殊的 IP 地址，专门用于指向自己的计算机。</li>
+<li><strong>1313</strong>：端口号，Hugo 默认使用 <strong>1313 端口</strong> 作为本地服务器端口，你可以修改它（例如 <code>hugo server -p 8080</code> 会改用 8080 端口）。</li>
+<li><strong>http://localhost:1313/</strong>：这个 URL 允许你在本机测试 Hugo 生成的网站，而无需先发布到互联网。</li>
+</ul>
+<p>当你运行 <code>hugo server</code> 时，Hugo 会启动一个临时 Web 服务器，在你修改内容后自动刷新页面，让你能实时预览网站效果。</p>
+
+		</div>
+	</article>
+</main>
+
+
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2025 MathAgape.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+</body>
+</html>

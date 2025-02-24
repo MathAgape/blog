@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Misc on MathAgape</title>
+    <link>http://localhost:1313/misc/</link>
+    <description>Recent content in Misc on MathAgape</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 22 Feb 2025 18:15:39 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/misc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>国内使用 Git 的网络问题</title>
+      <link>http://localhost:1313/misc/git-network-issues/</link>
+      <pubDate>Sat, 22 Feb 2025 09:06:36 +0800</pubDate>
+      <guid>http://localhost:1313/misc/git-network-issues/</guid>
+      <description>&lt;ul&gt;&#xA;&lt;li&gt;我的系统：Windows 11&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;当时遇到的情况是，已经使用 VPN ，浏览器可以顺利上网，但在终端使用 git 相关命令总遇到类似这样的报错：&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Could not resolve host: raw.githubusercontent.com&#xA;&#xA;caused by: [28] Timeout was reached (Failed to connect to github.com port 443 after 21036 ms: Could not connect to server)&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;后来得知是要进行一些设置，终端才能像浏览器一样使用 VPN。我进行以下操作后，就能顺利连接 git 了！（特别感谢&lt;strong&gt;青羽&lt;/strong&gt;提供的帮助）&lt;/p&gt;&#xA;&lt;h2 id=&#34;设置-vpn&#34;&gt;设置 VPN&lt;/h2&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://mathagape.github.io/blog/images/git-network-issues-clash-settings.png&#34; alt=&#34;Clash&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;特别地，如果无法开启&lt;strong&gt;服务模式&lt;/strong&gt;，可参考这篇&lt;a href=&#34;https://blog.arnozeng.com/archives/service-mode-setup-manually.html&#34;&gt;Clash for Windows 手动安装 Service Mode&lt;/a&gt;解决。&lt;/p&gt;&#xA;&lt;h2 id=&#34;添加-hosts&#34;&gt;添加 hosts&lt;/h2&gt;&#xA;&lt;p&gt;打开&lt;code&gt;C:\Windows\System32\drivers\etc&lt;/code&gt;，找到&lt;strong&gt;hosts&lt;/strong&gt;文件。要修改这个文件需要管理员权限，一个简单的办法是，把它复制到桌面，用记事本打开这个文件，在最后一行写入&lt;code&gt;185.199.108.133 raw.githubusercontent.com&lt;/code&gt;，保存，替换原来那个，重启电脑。&lt;/p&gt;&#xA;&lt;h2 id=&#34;测试&#34;&gt;测试&lt;/h2&gt;&#xA;&lt;p&gt;打开&lt;strong&gt;终端&lt;/strong&gt;，用&lt;code&gt;ping&lt;/code&gt;测试终端是否已经像浏览器一样使用 VPN。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Claude 辅助写 Typst</title>
+      <link>http://localhost:1313/misc/typst-claude/</link>
+      <pubDate>Sat, 22 Feb 2025 18:15:39 +0800</pubDate>
+      <guid>http://localhost:1313/misc/typst-claude/</guid>
+      <description>&lt;p&gt;我经常使用 ChatGPT 这样的大语言模型识别图片中的数学公式，转换为 LaTeX 代码是极为方便的。&#xA;但如果是要转化为 Typst 代码，ChatGPT 的表现就非常糟糕了。&#xA;我后来尝试 &lt;strong&gt;Claude&lt;/strong&gt;，效果奇佳！懒人写 Typst 有福了！（非常感谢&lt;strong&gt;RoseL&lt;/strong&gt;的帮助）&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://mathagape.github.io/blog/images/typst-claude.png&#34; alt=&#34;用 Claude 识别数学公式&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;更多 Typst 帮助：&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://typst-doc-cn.github.io/tutorial/&#34;&gt;蓝书 (Typst中文教程)&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://sitandr.github.io/typst-examples-book/book/&#34;&gt;例书&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://forum.typst.app/&#34;&gt;论坛&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

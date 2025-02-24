@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>国内使用 Git 的网络问题 - MathAgape</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="/css/style.css">
+	
+
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo">
+		<a class="logo__link" href="/" title="MathAgape&#39;s Blog" rel="home">
+			<div class="logo__item logo__text">
+					<div class="logo__title">MathAgape&#39;s Blog</div>
+					<div class="logo__tagline">Mathematics, Computer Science, and Philosophy Study Notes.</div>
+				</div>
+		</a>
+	</div>
+		<div class="divider"></div>
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">国内使用 Git 的网络问题</h1>
+			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2025-02-22T09:06:36&#43;08:00">February 22, 2025</time></div></div>
+		</header>
+		<div class="content post__content clearfix">
+			<ul>
+<li>我的系统：Windows 11</li>
+</ul>
+<p>当时遇到的情况是，已经使用 VPN ，浏览器可以顺利上网，但在终端使用 git 相关命令总遇到类似这样的报错：</p>
+<pre tabindex="0"><code>Could not resolve host: raw.githubusercontent.com
+
+caused by: [28] Timeout was reached (Failed to connect to github.com port 443 after 21036 ms: Could not connect to server)
+</code></pre><p>后来得知是要进行一些设置，终端才能像浏览器一样使用 VPN。我进行以下操作后，就能顺利连接 git 了！（特别感谢<strong>青羽</strong>提供的帮助）</p>
+<h2 id="设置-vpn">设置 VPN</h2>
+<p><img src="https://mathagape.github.io/blog/images/git-network-issues-clash-settings.png" alt="Clash"></p>
+<p>特别地，如果无法开启<strong>服务模式</strong>，可参考这篇<a href="https://blog.arnozeng.com/archives/service-mode-setup-manually.html">Clash for Windows 手动安装 Service Mode</a>解决。</p>
+<h2 id="添加-hosts">添加 hosts</h2>
+<p>打开<code>C:\Windows\System32\drivers\etc</code>，找到<strong>hosts</strong>文件。要修改这个文件需要管理员权限，一个简单的办法是，把它复制到桌面，用记事本打开这个文件，在最后一行写入<code>185.199.108.133 raw.githubusercontent.com</code>，保存，替换原来那个，重启电脑。</p>
+<h2 id="测试">测试</h2>
+<p>打开<strong>终端</strong>，用<code>ping</code>测试终端是否已经像浏览器一样使用 VPN。</p>
+
+		</div>
+	</article>
+</main>
+
+
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2025 MathAgape.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+</body>
+</html>

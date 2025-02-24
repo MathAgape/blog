@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Misc - MathAgape</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="/css/style.css">
+	
+	<link rel="alternate" type="application/rss+xml" href="/misc/index.xml" title="MathAgape">
+
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo">
+		<a class="logo__link" href="/" title="MathAgape&#39;s Blog" rel="home">
+			<div class="logo__item logo__text">
+					<div class="logo__title">MathAgape&#39;s Blog</div>
+					<div class="logo__tagline">Mathematics, Computer Science, and Philosophy Study Notes.</div>
+				</div>
+		</a>
+	</div>
+		<div class="divider"></div>
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main list" role="main">
+	<header class="main__header">
+		<h1 class="main__title">Misc</h1>
+	</header>
+	<div class="content main__content clearfix">
+		<p>杂七杂八的计算机小技巧。</p>
+
+	</div><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/misc/git-network-issues/" rel="bookmark">
+			国内使用 Git 的网络问题
+			</a>
+		</h2>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2025-02-22T09:06:36&#43;08:00">February 22, 2025</time></div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<ul>
+<li>我的系统：Windows 11</li>
+</ul>
+<p>当时遇到的情况是，已经使用 VPN ，浏览器可以顺利上网，但在终端使用 git 相关命令总遇到类似这样的报错：</p>
+<pre tabindex="0"><code>Could not resolve host: raw.githubusercontent.com
+
+caused by: [28] Timeout was reached (Failed to connect to github.com port 443 after 21036 ms: Could not connect to server)
+</code></pre><p>后来得知是要进行一些设置，终端才能像浏览器一样使用 VPN。我进行以下操作后，就能顺利连接 git 了！（特别感谢<strong>青羽</strong>提供的帮助）</p>
+<h2 id="设置-vpn">设置 VPN</h2>
+<p><img src="https://mathagape.github.io/blog/images/git-network-issues-clash-settings.png" alt="Clash"></p>
+<p>特别地，如果无法开启<strong>服务模式</strong>，可参考这篇<a href="https://blog.arnozeng.com/archives/service-mode-setup-manually.html">Clash for Windows 手动安装 Service Mode</a>解决。</p>
+<h2 id="添加-hosts">添加 hosts</h2>
+<p>打开<code>C:\Windows\System32\drivers\etc</code>，找到<strong>hosts</strong>文件。要修改这个文件需要管理员权限，一个简单的办法是，把它复制到桌面，用记事本打开这个文件，在最后一行写入<code>185.199.108.133 raw.githubusercontent.com</code>，保存，替换原来那个，重启电脑。</p>
+<h2 id="测试">测试</h2>
+<p>打开<strong>终端</strong>，用<code>ping</code>测试终端是否已经像浏览器一样使用 VPN。</p>
+	</div>
+</article><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/misc/typst-claude/" rel="bookmark">
+			Claude 辅助写 Typst
+			</a>
+		</h2>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2025-02-22T18:15:39&#43;08:00">February 22, 2025</time></div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<p>我经常使用 ChatGPT 这样的大语言模型识别图片中的数学公式，转换为 LaTeX 代码是极为方便的。
+但如果是要转化为 Typst 代码，ChatGPT 的表现就非常糟糕了。
+我后来尝试 <strong>Claude</strong>，效果奇佳！懒人写 Typst 有福了！（非常感谢<strong>RoseL</strong>的帮助）</p>
+<p><img src="https://mathagape.github.io/blog/images/typst-claude.png" alt="用 Claude 识别数学公式"></p>
+<p><strong>更多 Typst 帮助：</strong></p>
+<ul>
+<li><a href="https://typst-doc-cn.github.io/tutorial/">蓝书 (Typst中文教程)</a></li>
+<li><a href="https://sitandr.github.io/typst-examples-book/book/">例书</a></li>
+<li><a href="https://forum.typst.app/">论坛</a></li>
+</ul>
+	</div>
+</article>
+</main>
+
+
+			</div>
+			
+
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2025 MathAgape.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+</body>
+</html>
