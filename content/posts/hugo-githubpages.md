@@ -47,7 +47,7 @@ git push origin main
 
 点击网页上的 **Settings > Pages** ，将 **Source** 从 **Deploy from a branch** 改成 **GitHub Actions** 。
 
-![选择 Source 为 GitHub Actions](https://mathagape.github.io/blog/images/host-on-github-pages-source.png)
+![选择 Source 为 GitHub Actions](https://mathagape.github.io/blog/images/hugo-githubpages-source.png)
 
 打开**终端**（注意当前的工作目录依旧在C:\hugo\my-new-site），用以下命令新建一个空的文件 **hugo.yaml**：
 ```PowerShell
@@ -149,15 +149,15 @@ git push origin main
 
 打开浏览器访问仓库，点击 **Actions**。
 
-![查看工作流](https://mathagape.github.io/blog/images/host-on-github-pages-actions.png)
+![查看工作流](https://mathagape.github.io/blog/images/hugo-githubpages-actions.png)
 
 你会看到工作流的状态，等到前面的图标变成绿勾，就代表完成部署了。点击绿勾右边的链接。
 
-![部署完成](https://mathagape.github.io/blog/images/host-on-github-pages-done.png)
+![部署完成](https://mathagape.github.io/blog/images/hugo-githubpages-done.png)
 
 再点击 **deploy** 下的网址，就能看到 GitHub Pages 了！
 
-![GitHub Pages 页面链接](https://mathagape.github.io/blog/images/host-on-github-pages-link.png)
+![GitHub Pages 页面链接](https://mathagape.github.io/blog/images/hugo-githubpages-link.png)
 
 ### 日常维护
 

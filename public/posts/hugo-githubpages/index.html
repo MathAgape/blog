@@ -88,7 +88,7 @@
 打开浏览器访问仓库，刷新查看是否推送成功。若成功，就可以继续自动化部署的设置了。</p>
 <h3 id="自动化部署">自动化部署</h3>
 <p>点击网页上的 <strong>Settings &gt; Pages</strong> ，将 <strong>Source</strong> 从 <strong>Deploy from a branch</strong> 改成 <strong>GitHub Actions</strong> 。</p>
-<p><img src="https://mathagape.github.io/blog/images/host-on-github-pages-source.png" alt="选择 Source 为 GitHub Actions"></p>
+<p><img src="https://mathagape.github.io/blog/images/hugo-githubpages-source.png" alt="选择 Source 为 GitHub Actions"></p>
 <p>打开<strong>终端</strong>（注意当前的工作目录依旧在C:\hugo\my-new-site），用以下命令新建一个空的文件 <strong>hugo.yaml</strong>：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>cd C:\hugo\my-new-site
 </span></span><span style="display:flex;"><span>mkdir -p .github/workflows
@@ -178,11 +178,11 @@
 </span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;Add GitHub Actions for Hugo deployment”
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">git push origin main
 </span></span></span></code></pre></div><p>打开浏览器访问仓库，点击 <strong>Actions</strong>。</p>
-<p><img src="https://mathagape.github.io/blog/images/host-on-github-pages-actions.png" alt="查看工作流"></p>
+<p><img src="https://mathagape.github.io/blog/images/hugo-githubpages-actions.png" alt="查看工作流"></p>
 <p>你会看到工作流的状态，等到前面的图标变成绿勾，就代表完成部署了。点击绿勾右边的链接。</p>
-<p><img src="https://mathagape.github.io/blog/images/host-on-github-pages-done.png" alt="部署完成"></p>
+<p><img src="https://mathagape.github.io/blog/images/hugo-githubpages-done.png" alt="部署完成"></p>
 <p>再点击 <strong>deploy</strong> 下的网址，就能看到 GitHub Pages 了！</p>
-<p><img src="https://mathagape.github.io/blog/images/host-on-github-pages-link.png" alt="GitHub Pages 页面链接"></p>
+<p><img src="https://mathagape.github.io/blog/images/hugo-githubpages-link.png" alt="GitHub Pages 页面链接"></p>
 <h3 id="日常维护">日常维护</h3>
 <p>对我来说 Hugo + GitHub Pages 的组合非常轻量，便于日常维护。</p>
 <p>只需增减修改 Markdown 文档，执行以下命令，即可完成本地预览：</p>
