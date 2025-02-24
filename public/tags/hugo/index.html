@@ -31,7 +31,22 @@
 				</div>
 		</a>
 	</div>
-		<div class="divider"></div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/categories/web-dev/">
+				
+				<span class="menu__text">Web Dev</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
 	</div>
 </header>
 		<div class="wrapper flex">
@@ -44,8 +59,26 @@
 	
 	<header class="list__header">
 		<h2 class="list__title post__title">
+			<a href="/posts/hugo-githubpages/" rel="bookmark">
+			Github Pages 自动化部署
+			</a>
+		</h2>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2025-02-23T19:17:10&#43;08:00">February 23, 2025</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/web-dev/" rel="category">Web-Dev</a>
+	</span>
+</div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<p>当你已经知道如何用 Hugo 完成本地建站，接下来就可以将它部署到互联网上了！
+<strong>GitHub Pages</strong> 托管是最为简单的办法之一，无需购买服务器，快捷、免费、稳定，尤其是 <strong>GitHub Actions</strong> 自动化部署功能特别方便！</p>
+	</div>
+</article><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
 			<a href="/posts/hugo-start/" rel="bookmark">
-			从零开始的 Hugo 本地建站
+			Hugo 本地建站
 			</a>
 		</h2>
 		<div class="list__meta meta">
@@ -55,8 +88,42 @@
 </div></div>
 	</header>
 	<div class="content list__excerpt post__content clearfix">
-		<p>本站使用 Hugo + GitHub Pages 搭建。</p>
-<p>Hugo 是一个基于 Go 语言的静态网站生成器。几乎不需要编程基础，只要掌握 Markdown 和 Git，就能轻松搭建和维护个人博客或文档网站。</p>
+		<p>本站使用 Hugo + GitHub Pages 搭建。
+Hugo 是一个基于 Go 语言的静态网站生成器。只需挑选一款喜欢的主题，具备一点 git 基础，就能在几分钟内轻松完成本地建站。</p>
+<hr>
+<ul>
+<li>我的系统：Windows 11</li>
+<li>我的终端：PowerShell 7</li>
+<li>Hugo 官方文档参考：<a href="https://gohugo.io/getting-started/quick-start/">Quick start</a></li>
+</ul>
+<h3 id="注意">注意</h3>
+<ul>
+<li>如果你是 Windows 用户，务必使用 <strong>PowerShell 7</strong>。</li>
+<li>务必要安装 hugo (extended)。</li>
+</ul>
+<p>不遵循以上两点，亲测会遇到 bug。</p>
+<hr>
+<h3 id="安装-hugo">安装 Hugo</h3>
+<p>打开<strong>终端</strong>，使用一下命令即可安装 Hugo：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>winget install Hugo.Hugo.Extended
+</span></span></code></pre></div><p>安装完成后，可用<code>PowerShell hugo version</code>验证。</p>
+<p>更多安装方式，可参考官方文档：<a href="https://gohugo.io/installation/windows/">Install Hugo on Windows</a></p>
+<hr>
+<h3 id="挑选主题">挑选主题</h3>
+<p>访问<a href="https://themes.gohugo.io/">Hugo 官方主题库</a>，挑选一个适合自己需求的主题。</p>
+<p>我选择了<a href="https://themes.gohugo.io/themes/mainroad/">Mainroad</a>这款主题。</p>
+<hr>
+<h3 id="生成网站">生成网站</h3>
+<p>打开<strong>终端</strong>，先进入要本地建站的目录，例如<code>cd C:\hugo</code>。</p>
+<p>使用以下命令即可<strong>一步建站</strong>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>hugo new site mainroad
+</span></span><span style="display:flex;"><span>cd  mainroad
+</span></span><span style="display:flex;"><span>git init
+</span></span><span style="display:flex;"><span>git submodule add https<span style="color:#960050;background-color:#1e0010">:</span>//github.com/vimux/mainroad.git themes/mainroad
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;theme = &#39;mainroad&#39;&#34;</span> &gt;&gt; hugo.toml
+</span></span><span style="display:flex;"><span>hugo server
+</span></span></code></pre></div><p>按住 ctrl ，点击生成的地址（形如http://localhost:1313/），即可预览网站效果。
+按 ctrl+c ，即可停止开发服务器的运行。</p>
 	</div>
 </article>
 </main>
@@ -77,6 +144,7 @@
 <div class="widget-taglist widget">
 	<h4 class="widget__title">Tags</h4>
 	<div class="widget__content">
+		<a class="widget-taglist__link widget__link btn" href="/tags/github-pages/" title="GitHub Pages">GitHub Pages</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/hugo/" title="Hugo">Hugo</a>
 	</div>
 </div>
