@@ -3,7 +3,7 @@
 <head><script src="/blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog/livereload" data-no-instant defer></script>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>解决使用 Git 的网络问题（国内） - MathAgape</title>
+	<title>LaTeX - MathAgape</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,6 +13,7 @@
 
 	<link rel="stylesheet" href="/blog/css/style.css">
 	
+	<link rel="alternate" type="application/rss+xml" href="/blog/tags/latex/index.xml" title="MathAgape">
 
 	<link rel="shortcut icon" href="/blog/favicon.ico">
 		
@@ -58,57 +59,35 @@
 		<div class="wrapper flex">
 			<div class="primary">
 			
-<main class="main" role="main">
-	<article class="post">
-		<header class="post__header">
-			<h1 class="post__title">解决使用 Git 的网络问题（国内）</h1>
-			<div class="post__meta meta">
+<main class="main list" role="main">
+	<header class="main__header">
+		<h1 class="main__title">LaTeX</h1>
+	</header><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/blog/posts/hugo-latex/" rel="bookmark">
+			Hugo × LaTeX 网页数学公式渲染
+			</a>
+		</h2>
+		<div class="list__meta meta">
 <div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2025-02-22T09:06:36&#43;08:00">February 22, 2025</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/blog/categories/tech-tips/" rel="category">Tech-Tips</a>
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2025-02-24T20:53:36&#43;08:00">February 24, 2025</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/blog/categories/web-dev/" rel="category">Web-Dev</a>
 	</span>
 </div></div>
-		</header>
-		<div class="content post__content clearfix">
-			<p>已经使用了 VPN ，浏览器也已经可以顺利上网了，但在终端使用 git 命令总遇到网络问题，非常不方便。但只需进行以下两项设置，就能在愉快使用 git 了！</p>
-<hr>
-<ul>
-<li>我的系统：Windows 11</li>
-<li>特别感谢：青羽（提出如何设置 VPN）</li>
-</ul>
-<hr>
-<h3 id="设置-vpn">设置 VPN</h3>
-<p><img src="https://mathagape.github.io/blog/images/git-network-issues-clash-settings.png" alt="Clash"></p>
-<p>特别地，如果无法开启<strong>服务模式</strong>，可参考这篇<a href="https://blog.arnozeng.com/archives/service-mode-setup-manually.html">Clash for Windows 手动安装 Service Mode</a>解决。</p>
-<hr>
-<h3 id="添加-hosts">添加 hosts</h3>
-<p>打开<code>C:\Windows\System32\drivers\etc</code>，找到<strong>hosts</strong>文件。要修改这个文件需要管理员权限，一个简单的办法是，把它复制到桌面，用记事本打开这个文件，在最后一行写入<code>185.199.108.133 raw.githubusercontent.com</code>，保存，替换原来那个，重启电脑。</p>
-<hr>
-<h3 id="测试">测试</h3>
-<p>打开<strong>终端</strong>，用<code>ping</code>测试终端是否已经像浏览器一样使用 VPN 。
-ho！这就是在国内也能流畅使用 git 的办法！</p>
-		</div>
-		<footer class="post__footer">
-			
-<div class="post__tags tags clearfix">
-	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M4 0h8s2 0 4 2l15 15s2 2 0 4L21 31s-2 2-4 0L2 16s-2-2-2-4V3s0-3 4-3m3 10a3 3 0 0 0 0-6 3 3 0 0 0 0 6"/></svg>
-	<ul class="tags__list">
-		<li class="tags__item">
-			<a class="tags__link btn" href="/blog/tags/git/" rel="tag">Git</a>
-		</li>
-		<li class="tags__item">
-			<a class="tags__link btn" href="/blog/tags/vpn/" rel="tag">VPN</a>
-		</li>
-	</ul>
-</div>
-		</footer>
-	</article>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<p>学会基本的 Hugo 本地建站和 GitHub Pages 部署之后，对于数学爱好者来说，最重要的就是让网页实现数学公式渲染。
+我选择使用 <strong>MathJax</strong> 这款 JavaScript显示引擎，支持渲染 LaTeX 数学标记。
+步骤涉及修改主题，附<strong>Fork 主题作为 git 子模块</strong>教程。</p>
+	</div>
+</article>
 </main>
 
 
-
-
 			</div>
-			<aside class="sidebar">
+			
+<aside class="sidebar">
 <div class="widget-categories widget">
 	<h4 class="widget__title">Categories</h4>
 	<div class="widget__content">
@@ -149,7 +128,7 @@ ho！这就是在国内也能流畅使用 git 的办法！</p>
   MathJax = {
     tex: {
       displayMath: [['\\[', '\\]'], ['$$', '$$']],  
-      inlineMath: [['\\(', '\\)'], ['$', '$']]                  
+      inlineMath: [['\\(', '\\)']]                  
     },
     loader:{
       load: ['ui/safe']

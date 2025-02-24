@@ -1,6 +1,6 @@
 +++
 date = '2025-02-23T19:17:10+08:00'
-title = 'Github Pages 自动化部署'
+title = 'Hugo × Github Pages 自动化部署'
 categories = ["Web-Dev"]
 tags = ["Hugo", "Git"]
 +++
@@ -186,3 +186,5 @@ git add .
 git commit -m "wip"
 git push
 ```
+
+ho！这样就完成了本地 Hugo 站点到 GitHub Pages 的托管！大家都能看到你的网站啦！

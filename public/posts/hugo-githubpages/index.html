@@ -3,7 +3,7 @@
 <head><script src="/blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog/livereload" data-no-instant defer></script>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Github Pages 自动化部署 - MathAgape</title>
+	<title>Hugo × Github Pages 自动化部署 - MathAgape</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -61,7 +61,7 @@
 <main class="main" role="main">
 	<article class="post">
 		<header class="post__header">
-			<h1 class="post__title">Github Pages 自动化部署</h1>
+			<h1 class="post__title">Hugo × Github Pages 自动化部署</h1>
 			<div class="post__meta meta">
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2025-02-23T19:17:10&#43;08:00">February 23, 2025</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/blog/categories/web-dev/" rel="category">Web-Dev</a>
@@ -205,7 +205,7 @@
 </span></span><span style="display:flex;"><span>git add .
 </span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;wip&#34;</span>
 </span></span><span style="display:flex;"><span>git push
-</span></span></code></pre></div>
+</span></span></code></pre></div><p>ho！这样就完成了本地 Hugo 站点到 GitHub Pages 的托管！大家都能看到你的网站啦！</p>
 		</div>
 		<footer class="post__footer">
 			
@@ -245,6 +245,7 @@
 	<div class="widget__content">
 		<a class="widget-taglist__link widget__link btn" href="/blog/tags/git/" title="Git">Git</a>
 		<a class="widget-taglist__link widget__link btn" href="/blog/tags/hugo/" title="Hugo">Hugo</a>
+		<a class="widget-taglist__link widget__link btn" href="/blog/tags/latex/" title="LaTeX">LaTeX</a>
 		<a class="widget-taglist__link widget__link btn" href="/blog/tags/llm/" title="LLM">LLM</a>
 		<a class="widget-taglist__link widget__link btn" href="/blog/tags/typst/" title="Typst">Typst</a>
 		<a class="widget-taglist__link widget__link btn" href="/blog/tags/vpn/" title="VPN">VPN</a>
@@ -268,7 +269,7 @@
   MathJax = {
     tex: {
       displayMath: [['\\[', '\\]'], ['$$', '$$']],  
-      inlineMath: [['\\(', '\\)']]                  
+      inlineMath: [['\\(', '\\)'], ['$', '$']]                  
     },
     loader:{
       load: ['ui/safe']

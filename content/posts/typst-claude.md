@@ -1,13 +1,13 @@
 +++
 date = '2025-02-22T18:15:39+08:00'
-title = 'Claude 辅助写 Typst'
+title = 'Claude × Typst：数学公式图像识别'
 categories = ["Tech-Tips"]
 tags = ["Typst", "LLM"]
 +++
 
-我经常使用 ChatGPT 这样的大语言模型（LLM）识别图片中的数学公式，转换为 LaTeX 代码是极为方便的。
+识别图片中的数学公式为 LaTeX 代码，我经常使用诸如 ChatGPT 的大语言模型（LLM），从此告别昂贵的 Mathpix。
 但如果是要转化为 Typst 代码，ChatGPT 的表现就非常糟糕了；遂尝试 **Claude** ，效果奇佳！懒人写 Typst 有福了！
-附国**外短信接码平台**，解决国内手机号无法注册 Claude 的问题。
+附**国外短信接码平台**使用教程，解决国内手机号无法注册 Claude 的问题。
 
 <!--more-->
 
@@ -39,4 +39,4 @@ tags = ["Typst", "LLM"]
 
 ![](https://mathagape.github.io/blog/images/typst-sms-claude.png)
 
-然后你就会获得一个临时的国外手机号，就能接受验证码注册 Claude 了！
+ho！这样，你就获得了一个临时的国外手机号，就能接受验证码注册 Claude 了！

@@ -42,7 +42,6 @@ theme = "mainroad"
         enable = true
         [markup.goldmark.extensions.passthrough.delimiters]
           block = [['\[', '\]'], ['$$', '$$']]
-          inline = [['\(', '\)']]
+          inline = [['\(', '\)'], ['$', '$']]
 [params]
   math = true
-  showFullContent = false

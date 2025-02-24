@@ -3,7 +3,7 @@
 <head><script src="/blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog/livereload" data-no-instant defer></script>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Claude 辅助写 Typst - MathAgape</title>
+	<title>Claude × Typst：数学公式图像识别 - MathAgape</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -61,7 +61,7 @@
 <main class="main" role="main">
 	<article class="post">
 		<header class="post__header">
-			<h1 class="post__title">Claude 辅助写 Typst</h1>
+			<h1 class="post__title">Claude × Typst：数学公式图像识别</h1>
 			<div class="post__meta meta">
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2025-02-22T18:15:39&#43;08:00">February 22, 2025</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/blog/categories/tech-tips/" rel="category">Tech-Tips</a>
@@ -69,9 +69,9 @@
 </div></div>
 		</header>
 		<div class="content post__content clearfix">
-			<p>我经常使用 ChatGPT 这样的大语言模型（LLM）识别图片中的数学公式，转换为 LaTeX 代码是极为方便的。
+			<p>识别图片中的数学公式为 LaTeX 代码，我经常使用诸如 ChatGPT 的大语言模型（LLM），从此告别昂贵的 Mathpix。
 但如果是要转化为 Typst 代码，ChatGPT 的表现就非常糟糕了；遂尝试 <strong>Claude</strong> ，效果奇佳！懒人写 Typst 有福了！
-附国<strong>外短信接码平台</strong>，解决国内手机号无法注册 Claude 的问题。</p>
+附<strong>国外短信接码平台</strong>使用教程，解决国内手机号无法注册 Claude 的问题。</p>
 <hr>
 <ul>
 <li>特别感谢：RoseL（提出用 Claude 代替 ChatGPT）</li>
@@ -91,7 +91,7 @@
 <p><img src="https://mathagape.github.io/blog/images/typst-sms-plus.png" alt=""></p>
 <p>搜索<strong>Claude</strong>，选一个便宜的购买即可。</p>
 <p><img src="https://mathagape.github.io/blog/images/typst-sms-claude.png" alt=""></p>
-<p>然后你就会获得一个临时的国外手机号，就能接受验证码注册 Claude 了！</p>
+<p>ho！这样，你就获得了一个临时的国外手机号，就能接受验证码注册 Claude 了！</p>
 		</div>
 		<footer class="post__footer">
 			
@@ -131,6 +131,7 @@
 	<div class="widget__content">
 		<a class="widget-taglist__link widget__link btn" href="/blog/tags/git/" title="Git">Git</a>
 		<a class="widget-taglist__link widget__link btn" href="/blog/tags/hugo/" title="Hugo">Hugo</a>
+		<a class="widget-taglist__link widget__link btn" href="/blog/tags/latex/" title="LaTeX">LaTeX</a>
 		<a class="widget-taglist__link widget__link btn" href="/blog/tags/llm/" title="LLM">LLM</a>
 		<a class="widget-taglist__link widget__link btn" href="/blog/tags/typst/" title="Typst">Typst</a>
 		<a class="widget-taglist__link widget__link btn" href="/blog/tags/vpn/" title="VPN">VPN</a>
@@ -154,7 +155,7 @@
   MathJax = {
     tex: {
       displayMath: [['\\[', '\\]'], ['$$', '$$']],  
-      inlineMath: [['\\(', '\\)']]                  
+      inlineMath: [['\\(', '\\)'], ['$', '$']]                  
     },
     loader:{
       load: ['ui/safe']

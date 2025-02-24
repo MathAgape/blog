@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head><script src="/blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog/livereload" data-no-instant defer></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Hugo × LaTeX 网页数学公式渲染 - MathAgape</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="/blog/css/style.css">
+	
+
+	<link rel="shortcut icon" href="/blog/favicon.ico">
+		
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo">
+		<a class="logo__link" href="/blog/" title="MathAgape&#39;s Blog" rel="home">
+			<div class="logo__item logo__text">
+					<div class="logo__title">MathAgape&#39;s Blog</div>
+					<div class="logo__tagline">Mathematics, Computer Science, and Philosophy Study Notes.</div>
+				</div>
+		</a>
+	</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/blog/categories/web-dev/">
+				
+				<span class="menu__text">Web Dev</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/blog/categories/tech-tips/">
+				
+				<span class="menu__text">Tech Tips</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Hugo × LaTeX 网页数学公式渲染</h1>
+			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2025-02-24T20:53:36&#43;08:00">February 24, 2025</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/blog/categories/web-dev/" rel="category">Web-Dev</a>
+	</span>
+</div></div>
+		</header>
+		<div class="content post__content clearfix">
+			<p>学会基本的 Hugo 本地建站和 GitHub Pages 部署之后，对于数学爱好者来说，最重要的就是让网页实现数学公式渲染。
+我选择使用 <strong>MathJax</strong> 这款 JavaScript显示引擎，支持渲染 LaTeX 数学标记。
+涉及修改主题，附<strong>Fork 主题并替换子模块</strong>教程。</p>
+<hr>
+<ul>
+<li>我的系统：Windows 11</li>
+<li>我的终端：PowerShell 7</li>
+<li>Hugo 官方文档参考：<a href="https://gohugo.io/content-management/mathematics/">Mathematics in Markdown</a></li>
+</ul>
+<hr>
+<h3 id="效果预览">效果预览</h3>
+<p>This is an inline \(a^*=x-b^*\) equation.</p>
+<p>These are block equations:</p>
+\[a^*=x-b^*\]\[ a^*=x-b^* \]\[
+a^*=x-b^*
+\]<p>These are also block equations:</p>
+$$a^*=x-b^*$$$$ a^*=x-b^* $$$$
+a^*=x-b^*
+$$<p><strong>以上效果对应的 MarkDown 代码：</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-MarkDown" data-lang="MarkDown"><span style="display:flex;"><span>This is an inline \(a^*=x-b^*\) equation.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>These are block equations:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>\[a^*=x-b^*\]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>\[ a^*=x-b^* \]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>\[
+</span></span><span style="display:flex;"><span>a^*=x-b^*
+</span></span><span style="display:flex;"><span>\]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>These are also block equations:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$$a^*=x-b^*$$
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$$ a^*=x-b^* $$
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$$
+</span></span><span style="display:flex;"><span>a^*=x-b^*
+</span></span><span style="display:flex;"><span>$$
+</span></span></code></pre></div><hr>
+<h3 id="修改站点配置文件">修改站点配置文件</h3>
+<p>打开<strong>hugo.toml</strong>，添加以下代码：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-TOML" data-lang="TOML"><span style="display:flex;"><span>[<span style="color:#a6e22e">markup</span>]
+</span></span><span style="display:flex;"><span>  [<span style="color:#a6e22e">markup</span>.<span style="color:#a6e22e">goldmark</span>]
+</span></span><span style="display:flex;"><span>    [<span style="color:#a6e22e">markup</span>.<span style="color:#a6e22e">goldmark</span>.<span style="color:#a6e22e">extensions</span>]
+</span></span><span style="display:flex;"><span>      [<span style="color:#a6e22e">markup</span>.<span style="color:#a6e22e">goldmark</span>.<span style="color:#a6e22e">extensions</span>.<span style="color:#a6e22e">passthrough</span>]
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">enable</span> = <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>        [<span style="color:#a6e22e">markup</span>.<span style="color:#a6e22e">goldmark</span>.<span style="color:#a6e22e">extensions</span>.<span style="color:#a6e22e">passthrough</span>.<span style="color:#a6e22e">delimiters</span>]
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">block</span> = [[<span style="color:#e6db74">&#39;\[&#39;</span>, <span style="color:#e6db74">&#39;\]&#39;</span>], [<span style="color:#e6db74">&#39;$$&#39;</span>, <span style="color:#e6db74">&#39;$$&#39;</span>]]
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">inline</span> = [[<span style="color:#e6db74">&#39;\(&#39;</span>, <span style="color:#e6db74">&#39;\)&#39;</span>], [<span style="color:#e6db74">&#39;$&#39;</span>, <span style="color:#e6db74">&#39;$&#39;</span>]]
+</span></span><span style="display:flex;"><span>[<span style="color:#a6e22e">params</span>]
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">math</span> = <span style="color:#66d9ef">true</span>
+</span></span></code></pre></div><hr>
+<h3 id="fork-主题并替换子模块">Fork 主题并替换子模块</h3>
+<p>之前一步建站的时候，是直接使用他人仓库的主题；由于本教程会涉及涉及修改主题，故需先 fork 那个主题到自己仓库。
+这是原仓库地址：<a href="https://github.com/Vimux/Mainroad">https://github.com/Vimux/Mainroad</a>，点击网页右上角的 <strong>Fork</strong> 即可。
+这是我 fork 后的仓库地址：<a href="https://github.com/MathAgape/Mainroad">https://github.com/MathAgape/Mainroad</a></p>
+<p>接下来，需要删除原来的主题子模块，<strong>终端</strong>命令如下：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>Remove-Item -Recurse -Force themes\mainroad
+</span></span><span style="display:flex;"><span>git submodule deinit themes/mainroad
+</span></span><span style="display:flex;"><span>git rm themes/mainroad
+</span></span></code></pre></div><p>然后，就可以添加自己 fork 的仓库为主题子模块，完成子模块替换：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>git submodule add --force https<span style="color:#960050;background-color:#1e0010">:</span>//github.com/MathAgape/Mainroad.git themes/mainroad
+</span></span></code></pre></div><p>确保子模块已正确初始化并更新：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>git submodule update --init --recursive
+</span></span></code></pre></div><p><code>cd C:\hugo\mainroad\themes\mainroad</code>进入<strong>主题目录</strong>（即<strong>子模块</strong>目录），用<code>git remote -v</code>检查远程分支，地址应该要是自己 fork 后的那个仓库地址。
+如果地址不对，可像这样设置远程地址：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>git remote set-url origin https<span style="color:#960050;background-color:#1e0010">:</span>//github.com/MathAgape/Mainroad.git
+</span></span></code></pre></div><p>把刚刚的修改都推送至远程仓库：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>git add .
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;Update submodule&#34;</span>
+</span></span><span style="display:flex;"><span>git push origin main
+</span></span></code></pre></div><p>这样，就完成了子模块替换，不再直接使用别人的主题，而是使用自己 fork 的主题，以便于在原主题上进行修改。</p>
+<hr>
+<h3 id="修改主题文件">修改主题文件</h3>
+<p>打开主题目录下的 <strong>layouts\partials</strong> 目录，注意到已经存在 <strong>mathjax.html</strong> 文件，故只需在这个文件中添加代码：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-HTML" data-lang="HTML"><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;MathJax-script&#34;</span> <span style="color:#a6e22e">async</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">MathJax</span> <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">tex</span><span style="color:#f92672">:</span> {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">displayMath</span><span style="color:#f92672">:</span> [[<span style="color:#e6db74">&#39;\\[&#39;</span>, <span style="color:#e6db74">&#39;\\]&#39;</span>], [<span style="color:#e6db74">&#39;$$&#39;</span>, <span style="color:#e6db74">&#39;$$&#39;</span>]],  <span style="color:#75715e">// block
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      <span style="color:#a6e22e">inlineMath</span><span style="color:#f92672">:</span> [[<span style="color:#e6db74">&#39;\\(&#39;</span>, <span style="color:#e6db74">&#39;\\)&#39;</span>], [<span style="color:#e6db74">&#39;$&#39;</span>, <span style="color:#e6db74">&#39;$&#39;</span>]]                  <span style="color:#75715e">// inline
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    },
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">loader</span><span style="color:#f92672">:</span>{
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">load</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#39;ui/safe&#39;</span>]
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>  };
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span></code></pre></div><p>再打开主题目录下的 <strong>layouts_default</strong> 目录，打开 <strong>baseof.html</strong> 文件，在这个文件的<code>&lt;head&gt;</code>下添加代码：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-HTML" data-lang="HTML"><span style="display:flex;"><span>  {{ if .Param &#34;math&#34; }}
+</span></span><span style="display:flex;"><span>    {{ partialCached &#34;math.html&#34; . }}
+</span></span><span style="display:flex;"><span>  {{ end }}
+</span></span></code></pre></div><p>把刚刚的修改都推送至远程仓库：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>git add .
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;modify mathjax.html”
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">git push origin master
+</span></span></span></code></pre></div><p>最后，<code>cd C:\hugo\mainroad</code>回到站点目录，更新子模块：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>git submodule update --remote --recursive
+</span></span></code></pre></div><p>此时可写一篇带有 LaTeX 标记的文章，并用<code>hugo server</code>查看数学公式的渲染是否正常，若是正常，就把刚刚的修改都推送至远程仓库：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>git add .
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;Update submodule&#34;</span>
+</span></span><span style="display:flex;"><span>git push origin main
+</span></span></code></pre></div><p>ho！这样，就完成了 Hugo 配置 MathJax 渲染 LaTeX的步骤，我们就可以随意书写数学公式啦！</p>
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M4 0h8s2 0 4 2l15 15s2 2 0 4L21 31s-2 2-4 0L2 16s-2-2-2-4V3s0-3 4-3m3 10a3 3 0 0 0 0-6 3 3 0 0 0 0 6"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/blog/tags/hugo/" rel="tag">Hugo</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/blog/tags/git/" rel="tag">Git</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/blog/tags/latex/" rel="tag">LaTeX</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+
+
+
+			</div>
+			<aside class="sidebar">
+<div class="widget-categories widget">
+	<h4 class="widget__title">Categories</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item">
+				<a class="widget__link" href="/blog/categories/tech-tips/">Tech-Tips</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/blog/categories/web-dev/">Web-Dev</a></li>
+		</ul>
+	</div>
+</div>
+<div class="widget-taglist widget">
+	<h4 class="widget__title">Tags</h4>
+	<div class="widget__content">
+		<a class="widget-taglist__link widget__link btn" href="/blog/tags/git/" title="Git">Git</a>
+		<a class="widget-taglist__link widget__link btn" href="/blog/tags/hugo/" title="Hugo">Hugo</a>
+		<a class="widget-taglist__link widget__link btn" href="/blog/tags/latex/" title="LaTeX">LaTeX</a>
+		<a class="widget-taglist__link widget__link btn" href="/blog/tags/llm/" title="LLM">LLM</a>
+		<a class="widget-taglist__link widget__link btn" href="/blog/tags/typst/" title="Typst">Typst</a>
+		<a class="widget-taglist__link widget__link btn" href="/blog/tags/vpn/" title="VPN">VPN</a>
+	</div>
+</div>
+</aside>
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2025 MathAgape.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/blog/js/menu.js"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script>
+  MathJax = {
+    tex: {
+      displayMath: [['\\[', '\\]'], ['$$', '$$']],  
+      inlineMath: [['\\(', '\\)'], ['$', '$']]                  
+    },
+    loader:{
+      load: ['ui/safe']
+    },
+  };
+</script>
+
+</body>
+</html>

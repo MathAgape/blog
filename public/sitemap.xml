@@ -3,27 +3,33 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/blog/categories/</loc>
-    <lastmod>2025-02-23T19:17:10+08:00</lastmod>
+    <lastmod>2025-02-24T20:53:36+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/tags/git/</loc>
-    <lastmod>2025-02-23T19:17:10+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/blog/posts/hugo-githubpages/</loc>
-    <lastmod>2025-02-23T19:17:10+08:00</lastmod>
+    <lastmod>2025-02-24T20:53:36+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/tags/hugo/</loc>
-    <lastmod>2025-02-23T19:17:10+08:00</lastmod>
+    <lastmod>2025-02-24T20:53:36+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/posts/hugo-latex/</loc>
+    <lastmod>2025-02-24T20:53:36+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/tags/latex/</loc>
+    <lastmod>2025-02-24T20:53:36+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/</loc>
-    <lastmod>2025-02-23T19:17:10+08:00</lastmod>
+    <lastmod>2025-02-24T20:53:36+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/posts/</loc>
-    <lastmod>2025-02-23T19:17:10+08:00</lastmod>
+    <lastmod>2025-02-24T20:53:36+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/tags/</loc>
-    <lastmod>2025-02-23T19:17:10+08:00</lastmod>
+    <lastmod>2025-02-24T20:53:36+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/categories/web-dev/</loc>
+    <lastmod>2025-02-24T20:53:36+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/posts/hugo-githubpages/</loc>
     <lastmod>2025-02-23T19:17:10+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/posts/hugo-start/</loc>

@@ -66,8 +66,27 @@
 	
 	<header class="list__header">
 		<h2 class="list__title post__title">
+			<a href="/blog/posts/hugo-latex/" rel="bookmark">
+			Hugo × LaTeX 网页数学公式渲染
+			</a>
+		</h2>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2025-02-24T20:53:36&#43;08:00">February 24, 2025</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/blog/categories/web-dev/" rel="category">Web-Dev</a>
+	</span>
+</div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<p>学会基本的 Hugo 本地建站和 GitHub Pages 部署之后，对于数学爱好者来说，最重要的就是让网页实现数学公式渲染。
+我选择使用 <strong>MathJax</strong> 这款 JavaScript显示引擎，支持渲染 LaTeX 数学标记。
+涉及修改主题，附<strong>Fork 主题并替换子模块</strong>教程。</p>
+	</div>
+</article><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
 			<a href="/blog/posts/hugo-githubpages/" rel="bookmark">
-			Github Pages 自动化部署
+			Hugo × Github Pages 自动化部署
 			</a>
 		</h2>
 		<div class="list__meta meta">
@@ -85,7 +104,7 @@
 	<header class="list__header">
 		<h2 class="list__title post__title">
 			<a href="/blog/posts/hugo-start/" rel="bookmark">
-			Hugo 本地建站
+			Hugo 本地一步建站
 			</a>
 		</h2>
 		<div class="list__meta meta">
@@ -121,6 +140,7 @@ Hugo 是一个基于 Go 语言的<strong>静态网站生成器</strong>。只需
 	<div class="widget__content">
 		<a class="widget-taglist__link widget__link btn" href="/blog/tags/git/" title="Git">Git</a>
 		<a class="widget-taglist__link widget__link btn" href="/blog/tags/hugo/" title="Hugo">Hugo</a>
+		<a class="widget-taglist__link widget__link btn" href="/blog/tags/latex/" title="LaTeX">LaTeX</a>
 		<a class="widget-taglist__link widget__link btn" href="/blog/tags/llm/" title="LLM">LLM</a>
 		<a class="widget-taglist__link widget__link btn" href="/blog/tags/typst/" title="Typst">Typst</a>
 		<a class="widget-taglist__link widget__link btn" href="/blog/tags/vpn/" title="VPN">VPN</a>
@@ -144,7 +164,7 @@ Hugo 是一个基于 Go 语言的<strong>静态网站生成器</strong>。只需
   MathJax = {
     tex: {
       displayMath: [['\\[', '\\]'], ['$$', '$$']],  
-      inlineMath: [['\\(', '\\)']]                  
+      inlineMath: [['\\(', '\\)'], ['$', '$']]                  
     },
     loader:{
       load: ['ui/safe']

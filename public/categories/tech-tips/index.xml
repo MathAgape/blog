@@ -9,11 +9,11 @@
     <lastBuildDate>Sat, 22 Feb 2025 18:15:39 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/blog/categories/tech-tips/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Claude 辅助写 Typst</title>
+      <title>Claude × Typst：数学公式图像识别</title>
       <link>http://localhost:1313/blog/posts/typst-claude/</link>
       <pubDate>Sat, 22 Feb 2025 18:15:39 +0800</pubDate>
       <guid>http://localhost:1313/blog/posts/typst-claude/</guid>
-      <description>&lt;p&gt;我经常使用 ChatGPT 这样的大语言模型（LLM）识别图片中的数学公式，转换为 LaTeX 代码是极为方便的。&#xA;但如果是要转化为 Typst 代码，ChatGPT 的表现就非常糟糕了；遂尝试 &lt;strong&gt;Claude&lt;/strong&gt; ，效果奇佳！懒人写 Typst 有福了！&#xA;附国&lt;strong&gt;外短信接码平台&lt;/strong&gt;，解决国内手机号无法注册 Claude 的问题。&lt;/p&gt;</description>
+      <description>&lt;p&gt;识别图片中的数学公式为 LaTeX 代码，我经常使用诸如 ChatGPT 的大语言模型（LLM），从此告别昂贵的 Mathpix。&#xA;但如果是要转化为 Typst 代码，ChatGPT 的表现就非常糟糕了；遂尝试 &lt;strong&gt;Claude&lt;/strong&gt; ，效果奇佳！懒人写 Typst 有福了！&#xA;附&lt;strong&gt;国外短信接码平台&lt;/strong&gt;使用教程，解决国内手机号无法注册 Claude 的问题。&lt;/p&gt;</description>
     </item>
     <item>
       <title>解决使用 Git 的网络问题（国内）</title>

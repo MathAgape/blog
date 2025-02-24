@@ -1,6 +1,6 @@
 +++
 date = '2025-02-23T17:54:22+08:00'
-title = 'Hugo 本地建站'
+title = 'Hugo 本地一步建站'
 categories = ["Web-Dev"]
 tags = ["Hugo", "Git"]
 +++
@@ -90,3 +90,5 @@ hugo new content content/posts/my-first-post.md
 ```PowerShell
 hugo server -D
 ```
+
+ho！这就是使用 Hugo 快速本地建站并添加文章的全部内容，是不是非常简单呢？

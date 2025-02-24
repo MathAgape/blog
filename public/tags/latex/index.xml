@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>LaTeX on MathAgape</title>
+    <link>http://localhost:1313/blog/tags/latex/</link>
+    <description>Recent content in LaTeX on MathAgape</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 24 Feb 2025 20:53:36 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/tags/latex/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo × LaTeX 网页数学公式渲染</title>
+      <link>http://localhost:1313/blog/posts/hugo-latex/</link>
+      <pubDate>Mon, 24 Feb 2025 20:53:36 +0800</pubDate>
+      <guid>http://localhost:1313/blog/posts/hugo-latex/</guid>
+      <description>&lt;p&gt;学会基本的 Hugo 本地建站和 GitHub Pages 部署之后，对于数学爱好者来说，最重要的就是让网页实现数学公式渲染。&#xA;我选择使用 &lt;strong&gt;MathJax&lt;/strong&gt; 这款 JavaScript显示引擎，支持渲染 LaTeX 数学标记。&#xA;步骤涉及修改主题，附&lt;strong&gt;Fork 主题作为 git 子模块&lt;/strong&gt;教程。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
