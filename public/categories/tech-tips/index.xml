@@ -13,7 +13,7 @@
       <link>http://localhost:1313/blog/posts/typst-claude/</link>
       <pubDate>Sat, 22 Feb 2025 18:15:39 +0800</pubDate>
       <guid>http://localhost:1313/blog/posts/typst-claude/</guid>
-      <description>&lt;p&gt;我经常使用 ChatGPT 这样的大语言模型（LLM）识别图片中的数学公式，转换为 LaTeX 代码是极为方便的.&#xA;但如果是要转化为 Typst 代码，ChatGPT 的表现就非常糟糕了.&#xA;后来尝试 &lt;strong&gt;Claude&lt;/strong&gt; ，效果奇佳! 懒人写 Typst 有福了!&lt;/p&gt;</description>
+      <description>&lt;p&gt;我经常使用 ChatGPT 这样的大语言模型（LLM）识别图片中的数学公式，转换为 LaTeX 代码是极为方便的。&#xA;但如果是要转化为 Typst 代码，ChatGPT 的表现就非常糟糕了；遂尝试 &lt;strong&gt;Claude&lt;/strong&gt; ，效果奇佳！懒人写 Typst 有福了！&#xA;附国&lt;strong&gt;外短信接码平台&lt;/strong&gt;，解决国内手机号无法注册 Claude 的问题。&lt;/p&gt;</description>
     </item>
     <item>
       <title>解决使用 Git 的网络问题（国内）</title>
