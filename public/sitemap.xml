@@ -2,31 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/blog/categories/</loc>
+    <loc>//localhost:1313/categories/</loc>
     <lastmod>2025-02-23T19:17:10+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/tags/github-pages/</loc>
+    <loc>//localhost:1313/tags/github-pages/</loc>
     <lastmod>2025-02-23T19:17:10+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/posts/hugo-githubpages/</loc>
+    <loc>//localhost:1313/posts/hugo-githubpages/</loc>
     <lastmod>2025-02-23T19:17:10+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/tags/hugo/</loc>
+    <loc>//localhost:1313/tags/hugo/</loc>
     <lastmod>2025-02-23T19:17:10+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/</loc>
+    <loc>//localhost:1313/</loc>
     <lastmod>2025-02-23T19:17:10+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/posts/</loc>
+    <loc>//localhost:1313/posts/</loc>
     <lastmod>2025-02-23T19:17:10+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/tags/</loc>
+    <loc>//localhost:1313/tags/</loc>
     <lastmod>2025-02-23T19:17:10+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/categories/web-dev/</loc>
+    <loc>//localhost:1313/categories/web-dev/</loc>
     <lastmod>2025-02-23T19:17:10+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/posts/hugo-start/</loc>
+    <loc>//localhost:1313/posts/hugo-start/</loc>
     <lastmod>2025-02-23T17:54:22+08:00</lastmod>
   </url>
 </urlset>
