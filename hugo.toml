@@ -20,10 +20,10 @@ theme = "mainroad"
   single = "right"
   widgets = ["categories", "taglist", "social"]
 
-[[Params.widgets.social.custom]] #自定义链接
-  title = "Youtube"
-  url = "https://youtube.com/user/username"
-  icon = false
+# [[Params.widgets.social.custom]] #自定义链接
+#  title = "Youtube"
+#  url = "https://youtube.com/user/username"
+#  icon = false
 
 [markup]
   [markup.goldmark]
@@ -35,3 +35,4 @@ theme = "mainroad"
           inline = [['\(', '\)']]
 [params]
   math = true
+  showFullContent = false

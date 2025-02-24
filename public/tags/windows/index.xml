@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on MathAgape</title>
-    <link>http://localhost:1313/posts/</link>
-    <description>Recent content in Posts on MathAgape</description>
+    <title>Windows on MathAgape</title>
+    <link>http://localhost:1313/tags/windows/</link>
+    <description>Recent content in Windows on MathAgape</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 23 Feb 2025 17:54:22 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/windows/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>从零开始的 Hugo 本地建站</title>
       <link>http://localhost:1313/posts/hugo-start/</link>
