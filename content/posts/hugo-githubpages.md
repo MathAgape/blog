@@ -2,7 +2,7 @@
 date = '2025-02-23T19:17:10+08:00'
 title = 'Github Pages 自动化部署'
 categories = ["Web-Dev"]
-tags = ["Hugo", "GitHub Pages"]
+tags = ["Hugo", "Git"]
 +++
 
 当你已经知道如何用 Hugo 完成本地建站，接下来就可以将它部署到互联网上了！
@@ -16,6 +16,8 @@ tags = ["Hugo", "GitHub Pages"]
 - 我的终端：PowerShell 7
 - Hugo 官方文档参考：[Host on GitHub Pages](https://gohugo.io/hosting-and-deployment/hosting-on-github/)
 
+---
+
 ### 创建仓库
 
 访问 [github](https://github.com/new) 创建一个新仓库，可以命名为**blog**。
@@ -23,6 +25,8 @@ tags = ["Hugo", "GitHub Pages"]
 
 注意，要保持仓库公开。
 我自己测试了一下，GitHub Pages 不支持私有仓库，否则无法设置自动化部署。（付费好像可以）
+
+---
 
 ### 推送本地站点
 
@@ -43,9 +47,13 @@ git push origin main
 这样，就完成了远程仓库的初始化。
 打开浏览器访问仓库，刷新查看是否推送成功。若成功，就可以继续自动化部署的设置了。
 
+---
+
 ### 自动化部署
 
 点击网页上的 **Settings > Pages** ，将 **Source** 从 **Deploy from a branch** 改成 **GitHub Actions** 。
+
+![改 Source](https://mathagape.github.io/blog/images/hugo-githubpages-source.png)
 
 打开**终端**（注意当前的工作目录依旧在C:\hugo\my-new-site），用以下命令新建一个空的文件 **hugo.yaml**：
 ```PowerShell
@@ -157,11 +165,13 @@ git push origin main
 
 ![GitHub Pages 页面链接](https://mathagape.github.io/blog/images/hugo-githubpages-link.png)
 
+---
+
 ### 日常维护
 
 对我来说 Hugo + GitHub Pages 的组合非常轻量，便于日常维护。
 
-只需增减修改 Markdown 文档，执行以下命令，即可完成本地预览：
+只需增减修改 Markdown 文档，执行以下**终端**命令，即可进行本地预览：
 ```PowerShell
 cd C:\hugo\my-new-site
 hugo server

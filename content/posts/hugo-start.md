@@ -2,7 +2,7 @@
 date = '2025-02-23T17:54:22+08:00'
 title = 'Hugo 本地建站'
 categories = ["Web-Dev"]
-tags = ["Hugo"]
+tags = ["Hugo", "Git"]
 +++
 
 本站使用 Hugo + GitHub Pages 搭建。

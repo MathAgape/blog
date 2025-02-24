@@ -3,7 +3,7 @@
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Web-Dev - MathAgape</title>
+	<title>Git - MathAgape</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,7 +13,7 @@
 
 	<link rel="stylesheet" href="../../css/style.css">
 	
-	<link rel="alternate" type="application/rss+xml" href="../../categories/web-dev/index.xml" title="MathAgape">
+	<link rel="alternate" type="application/rss+xml" href="../../tags/git/index.xml" title="MathAgape">
 
 	<link rel="shortcut icon" href="../../favicon.ico">
 		
@@ -54,42 +54,37 @@
 			
 <main class="main list" role="main">
 	<header class="main__header">
-		<h1 class="main__title">Web-Dev</h1>
+		<h1 class="main__title">Git</h1>
 	</header><article class="list__item post">
 	
 	<header class="list__header">
 		<h2 class="list__title post__title">
-			<a href="../../posts/hugo-githubpages/" rel="bookmark">
-			Github Pages 自动化部署
+			<a href="../../posts/git-network-issues/" rel="bookmark">
+			解决国内使用 Git 的网络问题
 			</a>
 		</h2>
 		<div class="list__meta meta">
 <div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2025-02-23T19:17:10&#43;08:00">February 23, 2025</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="../../categories/web-dev/" rel="category">Web-Dev</a>
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2025-02-22T09:06:36&#43;08:00">February 22, 2025</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="../../categories/tech-tips/" rel="category">Tech-Tips</a>
 	</span>
 </div></div>
 	</header>
 	<div class="content list__excerpt post__content clearfix">
-		<p>当你已经知道如何用 Hugo 完成本地建站，接下来就可以将它部署到互联网上了！
-<strong>GitHub Pages</strong> 托管是最为简单的办法之一，无需购买服务器，快捷、免费、稳定，尤其是 <strong>GitHub Actions</strong> 自动化部署功能特别方便！</p>
-	</div>
-</article><article class="list__item post">
-	
-	<header class="list__header">
-		<h2 class="list__title post__title">
-			<a href="../../posts/hugo-start/" rel="bookmark">
-			Hugo 本地建站
-			</a>
-		</h2>
-		<div class="list__meta meta">
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2025-02-23T17:54:22&#43;08:00">February 23, 2025</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="../../categories/web-dev/" rel="category">Web-Dev</a>
-	</span>
-</div></div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		<p>本站使用 Hugo + GitHub Pages 搭建。
-Hugo 是一个基于 Go 语言的<strong>静态网站生成器</strong>。只需挑选一款喜欢的<strong>主题</strong>，具备一点 <strong>git</strong> 基础，就能在几分钟内轻松完成本地建站。</p>
+		<ul>
+<li>我的系统：Windows 11</li>
+</ul>
+<p>国内使用 Git，即使已经使用 VPN ，浏览器也可以顺利上网，但在终端使用 git 相关命令总遇到类似这样的报错：</p>
+<pre tabindex="0"><code>Could not resolve host: raw.githubusercontent.com
+
+caused by: [28] Timeout was reached (Failed to connect to github.com port 443 after 21036 ms: Could not connect to server)
+</code></pre><p>后来得知是要进行一些设置，终端才能像浏览器一样使用 VPN。我进行以下操作后，就能顺利连接 git 了！（特别感谢<strong>青羽</strong>提供的帮助）</p>
+<h2 id="设置-vpn">设置 VPN</h2>
+<p><img src="https://mathagape.github.io/blog/images/git-network-issues-clash-settings.png" alt="Clash"></p>
+<p>特别地，如果无法开启<strong>服务模式</strong>，可参考这篇<a href="https://blog.arnozeng.com/archives/service-mode-setup-manually.html">Clash for Windows 手动安装 Service Mode</a>解决。</p>
+<h2 id="添加-hosts">添加 hosts</h2>
+<p>打开<code>C:\Windows\System32\drivers\etc</code>，找到<strong>hosts</strong>文件。要修改这个文件需要管理员权限，一个简单的办法是，把它复制到桌面，用记事本打开这个文件，在最后一行写入<code>185.199.108.133 raw.githubusercontent.com</code>，保存，替换原来那个，重启电脑。</p>
+<h2 id="测试">测试</h2>
+<p>打开<strong>终端</strong>，用<code>ping</code>测试终端是否已经像浏览器一样使用 VPN。</p>
 	</div>
 </article>
 </main>
@@ -113,9 +108,8 @@ Hugo 是一个基于 Go 语言的<strong>静态网站生成器</strong>。只需
 	<h4 class="widget__title">Tags</h4>
 	<div class="widget__content">
 		<a class="widget-taglist__link widget__link btn" href="../../tags/git/" title="Git">Git</a>
+		<a class="widget-taglist__link widget__link btn" href="../../tags/github-pages/" title="GitHub Pages">GitHub Pages</a>
 		<a class="widget-taglist__link widget__link btn" href="../../tags/hugo/" title="Hugo">Hugo</a>
-		<a class="widget-taglist__link widget__link btn" href="../../tags/llm/" title="LLM">LLM</a>
-		<a class="widget-taglist__link widget__link btn" href="../../tags/typst/" title="Typst">Typst</a>
 		<a class="widget-taglist__link widget__link btn" href="../../tags/vpn/" title="VPN">VPN</a>
 	</div>
 </div>

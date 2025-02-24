@@ -70,11 +70,13 @@
 <li>我的终端：PowerShell 7</li>
 <li>Hugo 官方文档参考：<a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/">Host on GitHub Pages</a></li>
 </ul>
+<hr>
 <h3 id="创建仓库">创建仓库</h3>
 <p>访问 <a href="https://github.com/new">github</a> 创建一个新仓库，可以命名为<strong>blog</strong>。
 我的仓库地址就是：<a href="https://github.com/MathAgape/blog.git">https://github.com/MathAgape/blog.git</a></p>
 <p>注意，要保持仓库公开。
 我自己测试了一下，GitHub Pages 不支持私有仓库，否则无法设置自动化部署。（付费好像可以）</p>
+<hr>
 <h3 id="推送本地站点">推送本地站点</h3>
 <p>打开<strong>终端</strong>，进入本地站点的目录：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>cd C:\hugo\my-new-site
@@ -86,8 +88,10 @@
 </span></span><span style="display:flex;"><span>git push origin main
 </span></span></code></pre></div><p>这样，就完成了远程仓库的初始化。
 打开浏览器访问仓库，刷新查看是否推送成功。若成功，就可以继续自动化部署的设置了。</p>
+<hr>
 <h3 id="自动化部署">自动化部署</h3>
 <p>点击网页上的 <strong>Settings &gt; Pages</strong> ，将 <strong>Source</strong> 从 <strong>Deploy from a branch</strong> 改成 <strong>GitHub Actions</strong> 。</p>
+<p><img src="https://mathagape.github.io/blog/images/hugo-githubpages-source.png" alt="改 Source"></p>
 <p>打开<strong>终端</strong>（注意当前的工作目录依旧在C:\hugo\my-new-site），用以下命令新建一个空的文件 <strong>hugo.yaml</strong>：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>cd C:\hugo\my-new-site
 </span></span><span style="display:flex;"><span>mkdir -p .github/workflows
@@ -182,9 +186,10 @@
 <p><img src="https://mathagape.github.io/blog/images/hugo-githubpages-done.png" alt="部署完成"></p>
 <p>再点击 <strong>deploy</strong> 下的网址，就能看到 GitHub Pages 了！</p>
 <p><img src="https://mathagape.github.io/blog/images/hugo-githubpages-link.png" alt="GitHub Pages 页面链接"></p>
+<hr>
 <h3 id="日常维护">日常维护</h3>
 <p>对我来说 Hugo + GitHub Pages 的组合非常轻量，便于日常维护。</p>
-<p>只需增减修改 Markdown 文档，执行以下命令，即可完成本地预览：</p>
+<p>只需增减修改 Markdown 文档，执行以下<strong>终端</strong>命令，即可进行本地预览：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>cd C:\hugo\my-new-site
 </span></span><span style="display:flex;"><span>hugo server
 </span></span></code></pre></div><p>注意，如果看不到新内容，请检查 MarkDown 文档的开头里是否包含了<code>draft = true</code>，如果有，删除它。</p>
@@ -204,7 +209,7 @@
 			<a class="tags__link btn" href="../../tags/hugo/" rel="tag">Hugo</a>
 		</li>
 		<li class="tags__item">
-			<a class="tags__link btn" href="../../tags/github-pages/" rel="tag">GitHub Pages</a>
+			<a class="tags__link btn" href="../../tags/git/" rel="tag">Git</a>
 		</li>
 	</ul>
 </div>
@@ -222,6 +227,8 @@
 	<div class="widget__content">
 		<ul class="widget__list">
 			<li class="widget__item">
+				<a class="widget__link" href="../../categories/tech-tips/">Tech-Tips</a></li>
+			<li class="widget__item">
 				<a class="widget__link" href="../../categories/web-dev/">Web-Dev</a></li>
 		</ul>
 	</div>
@@ -229,8 +236,11 @@
 <div class="widget-taglist widget">
 	<h4 class="widget__title">Tags</h4>
 	<div class="widget__content">
-		<a class="widget-taglist__link widget__link btn" href="../../tags/github-pages/" title="GitHub Pages">GitHub Pages</a>
+		<a class="widget-taglist__link widget__link btn" href="../../tags/git/" title="Git">Git</a>
 		<a class="widget-taglist__link widget__link btn" href="../../tags/hugo/" title="Hugo">Hugo</a>
+		<a class="widget-taglist__link widget__link btn" href="../../tags/llm/" title="LLM">LLM</a>
+		<a class="widget-taglist__link widget__link btn" href="../../tags/typst/" title="Typst">Typst</a>
+		<a class="widget-taglist__link widget__link btn" href="../../tags/vpn/" title="VPN">VPN</a>
 	</div>
 </div>
 </aside>

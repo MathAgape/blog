@@ -22,5 +22,19 @@
       <guid>//localhost:1313/posts/hugo-start/</guid>
       <description>&lt;p&gt;本站使用 Hugo + GitHub Pages 搭建。&#xA;Hugo 是一个基于 Go 语言的&lt;strong&gt;静态网站生成器&lt;/strong&gt;。只需挑选一款喜欢的&lt;strong&gt;主题&lt;/strong&gt;，具备一点 &lt;strong&gt;git&lt;/strong&gt; 基础，就能在几分钟内轻松完成本地建站。&lt;/p&gt;</description>
     </item>
+    <item>
+      <title>Claude 辅助写 Typst</title>
+      <link>//localhost:1313/posts/typst-claude/</link>
+      <pubDate>Sat, 22 Feb 2025 18:15:39 +0800</pubDate>
+      <guid>//localhost:1313/posts/typst-claude/</guid>
+      <description>&lt;p&gt;我经常使用 ChatGPT 这样的大语言模型（LLM）识别图片中的数学公式，转换为 LaTeX 代码是极为方便的.&#xA;但如果是要转化为 Typst 代码，ChatGPT 的表现就非常糟糕了.&#xA;后来尝试 &lt;strong&gt;Claude&lt;/strong&gt; ，效果奇佳! 懒人写 Typst 有福了!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>解决使用 Git 的网络问题（国内）</title>
+      <link>//localhost:1313/posts/git-network-issues/</link>
+      <pubDate>Sat, 22 Feb 2025 09:06:36 +0800</pubDate>
+      <guid>//localhost:1313/posts/git-network-issues/</guid>
+      <description>&lt;p&gt;已经使用了 VPN ，浏览器也已经可以顺利上网了，但在终端使用 git 命令总遇到网络问题，非常不方便。但只需进行以下两项设置，就能在愉快使用 git 了！&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>
