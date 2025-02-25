@@ -10,9 +10,9 @@
     <atom:link href="http://localhost:1313/tags/github-pages/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>GitHub Pages × 阿里云 域名绑定</title>
-      <link>http://localhost:1313/posts/title/</link>
+      <link>http://localhost:1313/posts/github-pages-custom-domain/</link>
       <pubDate>Tue, 25 Feb 2025 17:10:49 +0800</pubDate>
-      <guid>http://localhost:1313/posts/title/</guid>
+      <guid>http://localhost:1313/posts/github-pages-custom-domain/</guid>
       <description>&lt;p&gt;在域名解析中添加两条记录（A 与 CNAME），即可将&lt;strong&gt;阿里云&lt;/strong&gt;购买的域名与 &lt;strong&gt;Github Pages&lt;/strong&gt; 绑定。&lt;/p&gt;</description>
     </item>
   </channel>
