@@ -3,7 +3,7 @@
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>文章标题 - MathAgape</title>
+	<title>GitHub Pages × 阿里云 域名绑定 - MathAgape</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -50,13 +50,6 @@
 				
 			</a>
 		</li>
-		<li class="menu__item menu__item--active">
-			<a class="menu__link" href="/posts/sample/">
-				
-				<span class="menu__text">文章标题</span>
-				
-			</a>
-		</li>
 	</ul>
 </nav>
 
@@ -68,28 +61,38 @@
 <main class="main" role="main">
 	<article class="post">
 		<header class="post__header">
-			<h1 class="post__title">文章标题</h1>
+			<h1 class="post__title">GitHub Pages × 阿里云 域名绑定</h1>
 			<div class="post__meta meta">
 <div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2000-01-01T00:00:00&#43;08:00">January 01, 2000</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/%E5%88%86%E7%B1%BB1/" rel="category">分类1</a>, <a class="meta__link" href="/categories/%E5%88%86%E7%B1%BB2/" rel="category">分类2</a>
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2025-02-25T17:10:49&#43;08:00">February 25, 2025</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/web-dev/" rel="category">Web-Dev</a>
 	</span>
 </div></div>
 		</header>
 		<div class="content post__content clearfix">
-			<p>这是一个示例文本.</p>
+			<p>在域名解析中添加两条记录（A 与 CNAME），即可将<strong>阿里云</strong>购买的域名与 <strong>Github Pages</strong> 绑定。</p>
 <hr>
-<h2 id="普通文本">普通文本</h2>
-<p>正文内容.</p>
+<h3 id="阿里云域名解析">阿里云域名解析</h3>
+<p>打开<strong>终端</strong>，用<code>ping</code>获取自己 GitHub Pages 主机的<strong>IP地址</strong>，例如：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>ping mathagape.github.io
+</span></span></code></pre></div><p>访问<a href="https://wanwang.aliyun.com/domain/">阿里云域名注册与管理平台</a>，点击右上角的菜单进入<strong>域名控制台</strong>。
+再从左侧菜单进入<strong>域名列表</strong>，并点击要绑定的域名，我要绑定的域名是<strong>mathagape.com</strong>。
+再从左侧菜单进入<strong>域名解析</strong>，再<strong>解析设置</strong>下添加<strong>A记录</strong>与<strong>CNAME记录</strong>：</p>
+<ul>
+<li><strong>A记录：</strong> 主机记录<code>@</code>，记录值是前面ping出来的那个<strong>IP地址</strong>。</li>
+<li><strong>CNAME记录：</strong>：主机记录<code>www</code>，记录值是自己 GitHub Pages 的原域名。</li>
+</ul>
+<p>检查这两条记录的状态为绿色的<strong>启用</strong>。</p>
 <hr>
-<h2 id="数学公式">数学公式</h2>
-<p>This is an inline \(a^*=x-b^*\) equation.</p>
-<p>These are block equations:</p>
-\[a^*=x-b^*\]\[ a^*=x-b^* \]\[
-a^*=x-b^*
-\]<p>These are also block equations:</p>
-$$a^*=x-b^*$$$$ a^*=x-b^* $$$$
-a^*=x-b^*
-$$
+<h3 id="github-pages-自定义域名">GitHub Pages 自定义域名</h3>
+<p>打开 GitHub Pages 仓库的 <strong>Settings</strong>，点击左侧菜单的 <strong>Pages</strong>，在右侧 <strong>Custom domain</strong> 下填入要绑定的域名，点击 <strong>Save</strong>，等待出现<strong>绿勾 DNS check successful</strong>的提示。</p>
+<hr>
+<h3 id="注意">注意</h3>
+<p>当完成域名绑定之后，需要将 <strong>hugo.toml</strong> 的<code>baseurl</code>改为绑定的新域名，否则主题将无法正常渲染。
+我的域名是mathagape.com，故改为：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-TOML" data-lang="TOML"><span style="display:flex;"><span><span style="color:#a6e22e">baseurl</span> = <span style="color:#e6db74">&#34;https://mathagape.com/&#34;</span>
+</span></span></code></pre></div><p>改完之后要过一会，清除浏览器缓存，并刷新页面。</p>
+<p>现在，即使打开原来的 GitHub Pages 网址&lt;mathagape.github.io/blog/&gt;，浏览器也会自动跳转到自定义域名 &lt;mathagape.com&gt;；当然，也支持通过网址&lt;www.mathagape.com&gt;来访问。</p>
+<p>ho！这就是自定义域名的全部过程！</p>
 		</div>
 		<footer class="post__footer">
 			
@@ -97,10 +100,13 @@ $$
 	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M4 0h8s2 0 4 2l15 15s2 2 0 4L21 31s-2 2-4 0L2 16s-2-2-2-4V3s0-3 4-3m3 10a3 3 0 0 0 0-6 3 3 0 0 0 0 6"/></svg>
 	<ul class="tags__list">
 		<li class="tags__item">
-			<a class="tags__link btn" href="/tags/%E6%A0%87%E7%AD%BE1/" rel="tag">标签1</a>
+			<a class="tags__link btn" href="/tags/hugo/" rel="tag">Hugo</a>
 		</li>
 		<li class="tags__item">
-			<a class="tags__link btn" href="/tags/%E6%A0%87%E7%AD%BE2/" rel="tag">标签2</a>
+			<a class="tags__link btn" href="/tags/git/" rel="tag">Git</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/github-pages/" rel="tag">Github Pages</a>
 		</li>
 	</ul>
 </div>
@@ -121,10 +127,6 @@ $$
 				<a class="widget__link" href="/categories/tech-tips/">Tech-Tips</a></li>
 			<li class="widget__item">
 				<a class="widget__link" href="/categories/web-dev/">Web-Dev</a></li>
-			<li class="widget__item">
-				<a class="widget__link" href="/categories/%E5%88%86%E7%B1%BB1/">分类1</a></li>
-			<li class="widget__item">
-				<a class="widget__link" href="/categories/%E5%88%86%E7%B1%BB2/">分类2</a></li>
 		</ul>
 	</div>
 </div>
@@ -132,13 +134,12 @@ $$
 	<h4 class="widget__title">Tags</h4>
 	<div class="widget__content">
 		<a class="widget-taglist__link widget__link btn" href="/tags/git/" title="Git">Git</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/github-pages/" title="Github Pages">Github Pages</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/hugo/" title="Hugo">Hugo</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/latex/" title="LaTeX">LaTeX</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/llm/" title="LLM">LLM</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/typst/" title="Typst">Typst</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/vpn/" title="VPN">VPN</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/%E6%A0%87%E7%AD%BE1/" title="标签1">标签1</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/%E6%A0%87%E7%AD%BE2/" title="标签2">标签2</a>
 	</div>
 </div>
 </aside>
