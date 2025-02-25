@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>GitHub Pages × 阿里云 域名绑定 - MathAgape</title>
@@ -15,7 +15,6 @@
 	
 
 	<link rel="shortcut icon" href="/favicon.ico">
-		
 		
 </head>
 <body class="body">
@@ -75,17 +74,19 @@
 <h3 id="阿里云域名解析">阿里云域名解析</h3>
 <p>打开<strong>终端</strong>，用<code>ping</code>获取自己 GitHub Pages 主机的<strong>IP地址</strong>，例如：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>ping mathagape.github.io
-</span></span></code></pre></div><p>访问<a href="https://wanwang.aliyun.com/domain/">阿里云域名注册与管理平台</a>，点击右上角的菜单进入<strong>域名控制台</strong>。
-再从左侧菜单进入<strong>域名列表</strong>，并点击要绑定的域名，我要绑定的域名是<strong>mathagape.com</strong>。
+</span></span></code></pre></div><p>访问<a href="https://wanwang.aliyun.com/domain/">阿里云域名注册与管理平台</a>，点击右上角的菜单进入<strong>域名控制台</strong>。</p>
+<p>再从左侧菜单进入<strong>域名列表</strong>，并点击要绑定的域名，我要绑定的域名是<strong>mathagape.com</strong>。
 再从左侧菜单进入<strong>域名解析</strong>，再<strong>解析设置</strong>下添加<strong>A记录</strong>与<strong>CNAME记录</strong>：</p>
 <ul>
 <li><strong>A记录：</strong> 主机记录<code>@</code>，记录值是前面ping出来的那个<strong>IP地址</strong>。</li>
 <li><strong>CNAME记录：</strong>：主机记录<code>www</code>，记录值是自己 GitHub Pages 的原域名。</li>
 </ul>
 <p>检查这两条记录的状态为绿色的<strong>启用</strong>。</p>
+<p><img src="https://mathagape.github.io/blog/images/aliyun-domain-records.png" alt=""></p>
 <hr>
 <h3 id="github-pages-自定义域名">GitHub Pages 自定义域名</h3>
 <p>打开 GitHub Pages 仓库的 <strong>Settings</strong>，点击左侧菜单的 <strong>Pages</strong>，在右侧 <strong>Custom domain</strong> 下填入要绑定的域名，点击 <strong>Save</strong>，等待出现<strong>绿勾 DNS check successful</strong>的提示。</p>
+<p><img src="https://mathagape.github.io/blog/images/github-pages-custom-domain.png" alt=""></p>
 <hr>
 <h3 id="注意">注意</h3>
 <p>当完成域名绑定之后，需要将 <strong>hugo.toml</strong> 的<code>baseurl</code>改为绑定的新域名，否则主题将无法正常渲染。

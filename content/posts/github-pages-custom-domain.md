@@ -19,6 +19,7 @@ ping mathagape.github.io
 ```
 
 访问[阿里云域名注册与管理平台](https://wanwang.aliyun.com/domain/)，点击右上角的菜单进入**域名控制台**。
+
 再从左侧菜单进入**域名列表**，并点击要绑定的域名，我要绑定的域名是**mathagape.com**。
 再从左侧菜单进入**域名解析**，再**解析设置**下添加**A记录**与**CNAME记录**：
 
@@ -27,11 +28,15 @@ ping mathagape.github.io
 
 检查这两条记录的状态为绿色的**启用**。
 
+![](https://mathagape.github.io/blog/images/aliyun-domain-records.png)
+
 ---
 
 ### GitHub Pages 自定义域名
 
 打开 GitHub Pages 仓库的 **Settings**，点击左侧菜单的 **Pages**，在右侧 **Custom domain** 下填入要绑定的域名，点击 **Save**，等待出现**绿勾 DNS check successful**的提示。
+
+![](https://mathagape.github.io/blog/images/github-pages-custom-domain.png)
 
 ---
 
