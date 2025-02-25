@@ -52,7 +52,7 @@ winget install Hugo.Hugo.Extended
 
 使用以下命令即可**一步建站**：
 ```PowerShell
-hugo new site mainroad
+hugo new site blog
 cd  blog
 git init
 git submodule add https://github.com/vimux/mainroad.git themes/mainroad
