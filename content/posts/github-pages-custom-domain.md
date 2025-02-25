@@ -49,6 +49,6 @@ baseurl = "https://mathagape.com/"
 ```
 改完之后要过一会，清除浏览器缓存，并刷新页面。
 
-现在，即使打开原来的 GitHub Pages 网址<mathagape.github.io/blog/>，浏览器也会自动跳转到自定义域名 <mathagape.com>；当然，也支持通过网址<www.mathagape.com>来访问。
+现在，即使打开原来的 GitHub Pages 网址 <https://mathagape.github.io/blog/> ，浏览器也会自动跳转到自定义域名 <https://mathagape.com>；当然，也支持通过网址<https://www.mathagape.com>来访问。
 
 ho！这就是自定义域名的全部过程！
