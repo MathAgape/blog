@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>LaTeX on MathAgape</title>
-    <link>http://localhost:1313/tags/latex/</link>
+    <link>https://mathagape.com/tags/latex/</link>
     <description>Recent content in LaTeX on MathAgape</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 24 Feb 2025 20:53:36 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/latex/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://mathagape.com/tags/latex/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo × LaTeX 网页数学公式渲染</title>
-      <link>http://localhost:1313/posts/hugo-latex/</link>
+      <link>https://mathagape.com/posts/hugo-latex/</link>
       <pubDate>Mon, 24 Feb 2025 20:53:36 +0800</pubDate>
-      <guid>http://localhost:1313/posts/hugo-latex/</guid>
+      <guid>https://mathagape.com/posts/hugo-latex/</guid>
       <description>&lt;p&gt;学会基本的 Hugo 本地建站和 GitHub Pages 部署之后，对于数学爱好者来说，最重要的就是让网页实现数学公式渲染。&#xA;我选择使用 &lt;strong&gt;JavaScript显示引擎 MathJax&lt;/strong&gt;，支持&lt;strong&gt;渲染 LaTeX 数学公式&lt;/strong&gt;。&#xA;涉及修改主题，附&lt;strong&gt;Fork 主题并替换子模块&lt;/strong&gt;教程。&lt;/p&gt;</description>
     </item>
   </channel>

@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on MathAgape</title>
-    <link>http://localhost:1313/categories/</link>
+    <link>https://mathagape.com/categories/</link>
     <description>Recent content in Categories on MathAgape</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 25 Feb 2025 17:10:49 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://mathagape.com/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Web-Dev</title>
-      <link>http://localhost:1313/categories/web-dev/</link>
+      <link>https://mathagape.com/categories/web-dev/</link>
       <pubDate>Tue, 25 Feb 2025 17:10:49 +0800</pubDate>
-      <guid>http://localhost:1313/categories/web-dev/</guid>
+      <guid>https://mathagape.com/categories/web-dev/</guid>
       <description></description>
     </item>
     <item>
       <title>Tech-Tips</title>
-      <link>http://localhost:1313/categories/tech-tips/</link>
+      <link>https://mathagape.com/categories/tech-tips/</link>
       <pubDate>Sat, 22 Feb 2025 18:15:39 +0800</pubDate>
-      <guid>http://localhost:1313/categories/tech-tips/</guid>
+      <guid>https://mathagape.com/categories/tech-tips/</guid>
       <description></description>
     </item>
   </channel>
