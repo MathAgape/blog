@@ -111,7 +111,7 @@ git submodule add --force https://github.com/MathAgape/Mainroad.git themes/mainr
 git submodule update --init --recursive
 ```
 
-`cd C:\hugo\mainroad\themes\mainroad`进入**主题目录**（即**子模块**目录），用`git remote -v`检查远程分支，地址应该要是自己 fork 后的那个仓库地址。
+`cd C:\hugo\blog\themes\mainroad`进入**主题目录**（即**子模块**目录），用`git remote -v`检查远程分支，地址应该要是自己 fork 后的那个仓库地址。
 如果地址不对，可像这样设置远程地址：
 ```PowerShell
 git remote set-url origin https://github.com/MathAgape/Mainroad.git
@@ -160,7 +160,7 @@ git commit -m "modify mathjax.html”
 git push origin master
 ```
 
-最后，`cd C:\hugo\mainroad`回到站点目录，更新子模块：
+最后，`cd C:\hugo\blog`回到站点目录，更新子模块：
 ```PowerShell
 git submodule update --remote --recursive
 ```

@@ -32,7 +32,7 @@ tags = ["Hugo", "Git"]
 
 打开**终端**，进入本地站点的目录：
 ```PowerShell
-cd C:\hugo\my-new-site
+cd C:\hugo\blog
 ```
 
 之前生成网站都时候已经执行过`git init`，故若要将本地站点的全部内容推送到远程，只需执行以下命令：
@@ -55,9 +55,8 @@ git push origin main
 
 ![改 Source](https://mathagape.github.io/blog/images/hugo-githubpages-source.png)
 
-打开**终端**（注意当前的工作目录依旧在C:\hugo\my-new-site），用以下命令新建一个空的文件 **hugo.yaml**：
+打开**终端**（注意当前的工作目录要在`C:\hugo\blog`），用以下命令新建一个空的文件 **hugo.yaml**：
 ```PowerShell
-cd C:\hugo\my-new-site
 mkdir -p .github/workflows
 touch .github/workflows/hugo.yaml
 ```
@@ -171,17 +170,17 @@ git push origin main
 
 对我来说 Hugo + GitHub Pages 的组合非常轻量，便于日常维护。
 
-只需增减修改 Markdown 文档，执行以下**终端**命令，即可进行本地预览：
+打开终端，注意当前的工作目录要在`C:\hugo\blog`。
+
+增减修改 Markdown 文档后，若要本地预览，执行以下命令即可：
 ```PowerShell
-cd C:\hugo\my-new-site
 hugo server
 ```
 
 注意，如果看不到新内容，请检查 MarkDown 文档的开头里是否包含了`draft = true`，如果有，删除它。
 
-本地预览若满意，则使用以下命令，即可完成部署：
+本地预览若满意，则使用以下命令，即可完成远程更新：
 ```PowerShell
-cd C:\hugo\my-new-site
 git add .
 git commit -m "wip"
 git push

@@ -98,7 +98,7 @@
 <p>打开<strong>终端</strong>，先进入要本地建站的目录，例如<code>cd C:\hugo</code>。</p>
 <p>使用以下命令即可<strong>一步建站</strong>：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>hugo new site mainroad
-</span></span><span style="display:flex;"><span>cd  mainroad
+</span></span><span style="display:flex;"><span>cd  blog
 </span></span><span style="display:flex;"><span>git init
 </span></span><span style="display:flex;"><span>git submodule add https<span style="color:#960050;background-color:#1e0010">:</span>//github.com/vimux/mainroad.git themes/mainroad
 </span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;theme = &#39;mainroad&#39;&#34;</span> &gt;&gt; hugo.toml
@@ -115,7 +115,7 @@
 <p>当你运行 <code>hugo server</code> 时，Hugo 会启动一个临时 Web 服务器，在你修改内容后自动刷新页面，让你能实时预览网站效果。</p>
 <hr>
 <h3 id="添加文章">添加文章</h3>
-<p>打开<strong>终端</strong>，先进入本地建站的目录，例如<code>cd C:\hugo\mainroad</code>。</p>
+<p>打开<strong>终端</strong>，先进入本地建站的目录，例如<code>cd C:\hugo\blog</code>。</p>
 <p>使用以下命令即可<strong>添加文章</strong>：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>hugo new content content/posts/my-first-post.md
 </span></span></code></pre></div><p>用编辑器打开 my-first-post.md（我使用 <strong>VS Code</strong> 编辑器），会发现一些以 <code>+++</code> 包围的内容，称为 <strong>Front Matter</strong> 。</p>

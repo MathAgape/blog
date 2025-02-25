@@ -53,7 +53,7 @@ winget install Hugo.Hugo.Extended
 使用以下命令即可**一步建站**：
 ```PowerShell
 hugo new site mainroad
-cd  mainroad
+cd  blog
 git init
 git submodule add https://github.com/vimux/mainroad.git themes/mainroad
 echo "theme = 'mainroad'" >> hugo.toml
@@ -77,7 +77,7 @@ http://localhost:1313/这个地址叫做 **本地开发服务器地址（Localho
 
 ### 添加文章
 
-打开**终端**，先进入本地建站的目录，例如```cd C:\hugo\mainroad```。
+打开**终端**，先进入本地建站的目录，例如```cd C:\hugo\blog```。
 
 使用以下命令即可**添加文章**：
 ```PowerShell

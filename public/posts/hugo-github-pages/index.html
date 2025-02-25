@@ -86,7 +86,7 @@
 <hr>
 <h3 id="推送本地站点">推送本地站点</h3>
 <p>打开<strong>终端</strong>，进入本地站点的目录：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>cd C:\hugo\my-new-site
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>cd C:\hugo\blog
 </span></span></code></pre></div><p>之前生成网站都时候已经执行过<code>git init</code>，故若要将本地站点的全部内容推送到远程，只需执行以下命令：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>git remote add origin https<span style="color:#960050;background-color:#1e0010">:</span>//github.com/MathAgape/blog.git
 </span></span><span style="display:flex;"><span>git add .
@@ -99,9 +99,8 @@
 <h3 id="自动化部署">自动化部署</h3>
 <p>点击网页上的 <strong>Settings &gt; Pages</strong> ，将 <strong>Source</strong> 从 <strong>Deploy from a branch</strong> 改成 <strong>GitHub Actions</strong> 。</p>
 <p><img src="https://mathagape.github.io/blog/images/hugo-githubpages-source.png" alt="改 Source"></p>
-<p>打开<strong>终端</strong>（注意当前的工作目录依旧在C:\hugo\my-new-site），用以下命令新建一个空的文件 <strong>hugo.yaml</strong>：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>cd C:\hugo\my-new-site
-</span></span><span style="display:flex;"><span>mkdir -p .github/workflows
+<p>打开<strong>终端</strong>（注意当前的工作目录要在<code>C:\hugo\blog</code>），用以下命令新建一个空的文件 <strong>hugo.yaml</strong>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>mkdir -p .github/workflows
 </span></span><span style="display:flex;"><span>touch .github/workflows/hugo.yaml
 </span></span></code></pre></div><p>在 <strong>hugo.yaml</strong> 中填入如下代码：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-YAML" data-lang="YAML"><span style="display:flex;"><span><span style="color:#75715e"># Sample workflow for building and deploying a Hugo site to GitHub Pages</span>
@@ -196,13 +195,12 @@
 <hr>
 <h3 id="日常维护">日常维护</h3>
 <p>对我来说 Hugo + GitHub Pages 的组合非常轻量，便于日常维护。</p>
-<p>只需增减修改 Markdown 文档，执行以下<strong>终端</strong>命令，即可进行本地预览：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>cd C:\hugo\my-new-site
-</span></span><span style="display:flex;"><span>hugo server
+<p>打开终端，注意当前的工作目录要在<code>C:\hugo\blog</code>。</p>
+<p>增减修改 Markdown 文档后，若要本地预览，执行以下命令即可：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>hugo server
 </span></span></code></pre></div><p>注意，如果看不到新内容，请检查 MarkDown 文档的开头里是否包含了<code>draft = true</code>，如果有，删除它。</p>
-<p>本地预览若满意，则使用以下命令，即可完成部署：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>cd C:\hugo\my-new-site
-</span></span><span style="display:flex;"><span>git add .
+<p>本地预览若满意，则使用以下命令，即可完成远程更新：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>git add .
 </span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;wip&#34;</span>
 </span></span><span style="display:flex;"><span>git push
 </span></span></code></pre></div><p>ho！这样就完成了本地 Hugo 站点到 GitHub Pages 的托管！大家都能看到你的网站啦！</p>

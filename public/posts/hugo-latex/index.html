@@ -135,7 +135,7 @@ $$<p><strong>以上效果对应的 MarkDown 代码：</strong></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>git submodule add --force https<span style="color:#960050;background-color:#1e0010">:</span>//github.com/MathAgape/Mainroad.git themes/mainroad
 </span></span></code></pre></div><p>确保子模块已正确初始化并更新：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>git submodule update --init --recursive
-</span></span></code></pre></div><p><code>cd C:\hugo\mainroad\themes\mainroad</code>进入<strong>主题目录</strong>（即<strong>子模块</strong>目录），用<code>git remote -v</code>检查远程分支，地址应该要是自己 fork 后的那个仓库地址。
+</span></span></code></pre></div><p><code>cd C:\hugo\blog\themes\mainroad</code>进入<strong>主题目录</strong>（即<strong>子模块</strong>目录），用<code>git remote -v</code>检查远程分支，地址应该要是自己 fork 后的那个仓库地址。
 如果地址不对，可像这样设置远程地址：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>git remote set-url origin https<span style="color:#960050;background-color:#1e0010">:</span>//github.com/MathAgape/Mainroad.git
 </span></span></code></pre></div><p>把刚刚的修改都推送至远程仓库：</p>
@@ -166,7 +166,7 @@ $$<p><strong>以上效果对应的 MarkDown 代码：</strong></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>git add .
 </span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;modify mathjax.html”
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">git push origin master
-</span></span></span></code></pre></div><p>最后，<code>cd C:\hugo\mainroad</code>回到站点目录，更新子模块：</p>
+</span></span></span></code></pre></div><p>最后，<code>cd C:\hugo\blog</code>回到站点目录，更新子模块：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>git submodule update --remote --recursive
 </span></span></code></pre></div><p>此时可写一篇带有 LaTeX 标记的文章，并用<code>hugo server</code>查看数学公式的渲染是否正常，若是正常，就把刚刚的修改都推送至远程仓库：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span>git add .
