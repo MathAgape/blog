@@ -122,10 +122,10 @@
 <hr>
 <h3 id="构造配对pairing">构造：配对（Pairing）</h3>
 \[ \frac{\vdash a : A \quad \vdash b : B}{\vdash u : P} \]<ul>
-<li>类型论：如果 \(a\) 的类型是 \(A\)，\(b\) 的类型是 \(B\) ，那么 \(u\) 的类型是 \(P\)。</li>
-<li>编程：\(u\) 即 \((a, b)\) 可被写作形如<code>pair(a,b)</code>的前缀形式。</li>
-<li>集合论：如果 \(a\) 是 \(A\) 的元素，\(b\) 是 \(B\) 的元素，那么 \(u\) 是 \((a, b)\) 的元素。</li>
-<li>范畴论：\( Q \in \mathcal{C} \Rightarrow u: Q \to P\)。</li>
+<li>这串公式用自然语言说，就是：如果 \(a\) 的类型是 \(A\)，\(b\) 的类型是 \(B\) ，那么 \(u\) 的类型是 \(P\)。</li>
+<li>在编程中，\(u\) 即 \((a, b)\) 可被写作形如<code>pair(a,b)</code>的前缀形式。</li>
+<li>在集合论，就是：如果 \(a\) 是 \(A\) 的元素，\(b\) 是 \(B\) 的元素，那么 \(u\) 是 \((a, b)\) 的元素。</li>
+<li>在范畴论，就是：</li>
 </ul>
 <p><img src="https://mathagape.github.io/blog/images/cartesian-product-category-1-pairing.png" alt=""></p>
 <pre tabindex="0"><code>\documentclass{article}
@@ -145,10 +145,10 @@
 </code></pre><hr>
 <h3 id="构造投影projections">构造：投影（Projections）</h3>
 \[ \frac{\vdash u : P}{\vdash \pi_1(u) : A} \]\[ \frac{\vdash u : P}{\vdash \pi_2(u) : B} \]<ul>
-<li>类型论：如果 \(u\) 的类型是 \(P\)，那么 \(\pi_1(u)\) 的类型是 \(A\)。</li>
-<li>编程： \(\pi_1(u)\) 、\(\pi_2(u)\) 可被写作形如<code>proj_1(u)</code>、<code>proj_2(u)</code>的前缀形式。</li>
-<li>集合论：对于有序对 \((a, b)\) 总能通过投影\(\pi_1\) 、\(\pi_2\) 提取出它的第一个分量 \(\pi_1(a, b)\) 和第二个分量 \(\pi_2(a, b)\)，分别属于 \(A\) 和 \(B\) 。</li>
-<li>范畴论：\(\pi_1: P \to A\) ， \(\pi_2: P \to B\)。</li>
+<li>这串公式用自然语言说，就是：如果 \(u\) 的类型是 \(P\)，那么 \(\pi_1(u)\) 的类型是 \(A\)。</li>
+<li>在编程中， \(\pi_1(u)\) 、\(\pi_2(u)\) 可被写作形如<code>proj_1(u)</code>、<code>proj_2(u)</code>的前缀形式。</li>
+<li>在集合论，就是：对于有序对 \((a, b)\) 总能通过投影\(\pi_1\) 、\(\pi_2\) 提取出它的第一个分量 \(\pi_1(a, b)\) 和第二个分量 \(\pi_2(a, b)\)，分别属于 \(A\) 和 \(B\) 。</li>
+<li>在范畴论，就是：</li>
 </ul>
 <p><img src="https://mathagape.github.io/blog/images/cartesian-product-category-2-projections.png" alt=""></p>
 <pre tabindex="0"><code>\documentclass{article}
