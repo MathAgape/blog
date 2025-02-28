@@ -191,9 +191,12 @@ tags = ["Type Theory", "Category Theory"]
 
 ---
 
-通过这样一番探索，我们可以发现，我们似乎总用不同的方式来诉说同一个数学本质，类型论、计算机代码、集合论、范畴论，就好像各种语言变体，我愿称之为方言（dialects），每一种方言都在显示本质的某一侧。[^7] 
+通过这样一番探索，我们可以发现，我们似乎总用不同的方式来诉说同一个数学本质，类型论、计算机代码、集合论、范畴论，就好像各种语言变体，我愿称之为方言（dialects）[^7]，每一种方言都在显示本质的某一侧。
 
 类型论与计算机代码有一种更自然的相通，是一种非常便于计算（compute）的形式化方法，这为后面 LEAN 的辅助证明打下了基础。
+
+关于笛卡尔积在范畴论与类型论的对应，参考了[nLab 词条 cartesian product](https://ncatlab.org/nlab/show/cartesian+product)：
+![](https://mathagape.github.io/blog/images/cartesian-product-nlab.png)
 
 ---
 
