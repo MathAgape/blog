@@ -4,14 +4,19 @@ languageCode = "en-us"
 theme = "mainroad"
 
 [[menu.main]]
+  name = "Mathematics"
+  url = "/categories/web-dev/"
+  weight = 4
+
+[[menu.main]]
   name = "Web Dev"
   url = "/categories/web-dev/"
-  weight = 10
+  weight = 2
 
 [[menu.main]]
   name = "Tech Tips"
   url = "/categories/tech-tips/"
-  weight = 20
+  weight = 3
 
 [Params.logo]
   image = false

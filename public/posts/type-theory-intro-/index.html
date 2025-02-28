@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>初识类型论：以笛卡尔积为例 [WIP] - MathAgape</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="/css/style.css">
+	
+
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo">
+		<a class="logo__link" href="/" title="MathAgape&#39;s Blog" rel="home">
+			<div class="logo__item logo__text">
+					<div class="logo__title">MathAgape&#39;s Blog</div>
+					<div class="logo__tagline">Mathematics, Computer Science, and Philosophy Study Notes.</div>
+				</div>
+		</a>
+	</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/categories/web-dev/">
+				
+				<span class="menu__text">Web Dev</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/categories/tech-tips/">
+				
+				<span class="menu__text">Tech Tips</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">初识类型论：以笛卡尔积为例 [WIP]</h1>
+			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2025-02-28T13:45:53&#43;08:00">February 28, 2025</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/mathematics/" rel="category">Mathematics</a>
+	</span>
+</div></div>
+		</header>
+		<div class="content post__content clearfix">
+			<p>非常感谢一位朋友推荐的类型论入门课程<a href="https://www.youtube.com/playlist?list=PL-47DDuiZOMDBfb5t8Hd30utd_TopoQLE">MAT-FORMATH by <em>Andrej Bauer</em></a>，其中第一集(<a href="https://www.youtube.com/watch?v=OEGXNEPddYw&amp;t=2305s">2024-10-04 Type theory</a>)以<strong>笛卡尔积</strong>为例子，通俗易懂地讲解了类型论、集合论、范畴论的微妙关联。</p>
+<p>也非常感谢这位朋友之前推荐的范畴论入门书籍<strong>The Joy of Abstraction</strong> by <em>Eugenia Cheng</em>。</p>
+<p>以上就是本文的主要参考来源。感谢这些数学工作者的无私分享，他们没有故意建起知识的护城河，而是为初学者打破了第一道信息壁垒。</p>
+<p>本文很多内容为自己的初学思考，并不足够严谨，仅供参考。</p>
+<hr>
+<p>我们<strong>通常</strong>这样定义笛卡尔积<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>：</p>
+<p>设\(A\)和\(B\)为两个集合。<strong>笛卡尔积（cartesian product）</strong> 被定义为集合：</p>
+\[ P = \{(a, b) \mid a \in A, \, b \in B\} \]<p>其中的元素 \((a, b)\) 称为<strong>有序对（ordered pair）</strong>。\( P \) 通常被记作 \( A \times B \)。</p>
+<p>此外要注意到，当笛卡尔积的定义写下，就已经暗示了集合 \( P \) 配有两个自然<strong>投影（projections）</strong> \(\pi_1\)和\(\pi_2\)：\( \pi_1: A \times B \to A\)，\(\pi_2: A \times B \to B \)；其中， \(\pi_1(a, b) = a\)，\(\pi_2(a, b) = b\)。</p>
+<hr>
+<p>以上是笛卡尔积的通常定义，如果要写成纯粹的<strong>一阶逻辑(First-Order Logic)</strong> 形式，则是<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>：</p>
+\[ \forall x \, ( x \in A \times B \leftrightarrow \exists a \, \exists b \, (a \in A \land b \in B \land x = \{\{a\}, \{a, b\}\})) \]<hr>
+<p>以上是经典<strong>集合论</strong>和<strong>数理逻辑</strong>思维下的定义。
+但这样定义还不够自然——尤其是在使用计算机实现辅助证明时。因此，我们需要引入<strong>类型论</strong>，作为一种新的数学形式化（formalism）方法。</p>
+<p>下面我们先来看看<strong>类型论</strong>怎样表示笛卡尔积的定义：</p>
+<ol>
+<li><strong>初始化（Initialization）</strong><sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup></li>
+</ol>
+\[ \frac{\vdash A : Type \quad \vdash B : Type}{\vdash P : Type}\]<ol start="2">
+<li><strong>配对（Pairing）</strong></li>
+</ol>
+\[ \frac{\vdash a : A \quad \vdash b : B}{\vdash (a,b) : P} \]<ol start="3">
+<li><strong>投影（Projections）</strong></li>
+</ol>
+\[ \frac{\vdash u : P}{\vdash \pi_1(u) : A} \]\[ \frac{\vdash u : P}{\vdash \pi_2(u) : B} \]<ol start="4">
+<li><strong>等式约束（Equations）</strong>
+\[ \pi_1(a,b)=a \]
+\[ \pi_2(a,b)=b \]
+\[ (\pi_1(u),\pi_2(u))=u \]</li>
+</ol>
+<hr>
+<h2 id="构造constructions">构造（constructions）</h2>
+<p>前三条叙述了定义笛卡尔积所涉及的三种构造（constructions）。<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup></p>
+<h3 id="初始化initialization">初始化（Initialization）</h3>
+\[ \frac{\vdash A : Type \quad \vdash B : Type}{\vdash P : Type}\]<ul>
+<li>这表示：如果 \(A\) 和 \(B\) 是类型（Type），那么它们的笛卡尔积 \(P\) 也是一个类型。也就是说，笛卡尔积类型是一个新的类型，由两个给定的类型<strong>构造</strong>而成。</li>
+<li>在编程中，\(P\) 即 \(A \times B\) 可被写作形如<code>prod(A,B)</code>的前缀形式。</li>
+<li>在范畴论，相当于：
+\[ A, B \in \mathcal{C} \Rightarrow A \times B \in \mathcal{C} \]</li>
+</ul>
+<h3 id="配对pairing">配对（Pairing）</h3>
+\[ \frac{\vdash a : A \quad \vdash b : B}{\vdash (a,b) : P} \]<ul>
+<li>这表示：如果 \(a\) 是 \(A\) 的元素，\(b\) 是 \(B\) 的元素，那么我们可以<strong>构造</strong>一个有序对 \((a, b)\)，它属于 \(A \times B\)。</li>
+<li>在编程中， \((a, b)\) 可被写作形如<code>pair(a,b)</code>的前缀形式。</li>
+<li>在范畴论，相当于图示：</li>
+</ul>
+<pre tabindex="0"><code>\documentclass{article}
+\usepackage{amsmath, amssymb}
+\usepackage{tikz-cd}
+
+\begin{document}
+
+\[
+\begin{tikzcd}
+  &amp; Q \arrow[dl, &#34;a&#34;&#39;] \arrow[d, &#34;{(a,b)}&#34;] \arrow[dr, &#34;b&#34;] &amp; \\ 
+  A &amp; P &amp; B
+\end{tikzcd}
+\]
+
+\end{document}
+</code></pre><h3 id="投影projections">投影（Projections）</h3>
+\[ \frac{\vdash u : P}{\vdash \pi_1(u) : A} \]\[ \frac{\vdash u : P}{\vdash \pi_2(u) : B} \]<ul>
+<li>这表示：如果 \(u\) 是 \(P\) 的一个元素（即某个 \((a, b)\)），那么我们可以通过投影<strong>构造</strong>（提取）出它的第一个分量 \(\pi_1(u)\) 和第二个分量 \(\pi_2(u)\)，分别属于 \(A\) 和 \(B\) 。</li>
+<li>在编程中， \(\pi_1(u)\) 、\(\pi_2(u)\) 可被写作形如<code>proj_1(u)</code>、<code>proj_2(u)</code>的前缀形式。</li>
+<li>在范畴论，相当于图示：</li>
+</ul>
+<pre tabindex="0"><code>\documentclass{article}
+\usepackage{amsmath, amssymb}
+\usepackage{tikz-cd}
+
+\begin{document}
+
+\[
+\begin{tikzcd}
+  &amp; Q \arrow[d, &#34;{t}&#34;] &amp; \\ 
+  A &amp; \ P \ \arrow[l, &#34;\pi_1&#34;] \arrow[r, &#34;\pi_2&#34;&#39;] &amp; B
+\end{tikzcd}
+\]
+
+\end{document}
+</code></pre><hr>
+<h2 id="公理axioms">公理（Axioms）</h2>
+<p>但若仅仅只有构造，一切还都只是初步的框架，一些空壳符号的连接，意义还尚未成形。ho，就好像一具人的躯体（Körper），而非一个活生生的身体（Leib）<sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup>，它缺少灵魂！</p>
+<p>而等式（equations）是代数（algebra）思维的重要观念。</p>
+<p>因此，需要再加上<strong>等式</strong>将构造加以<strong>约束</strong>，这就是<strong>公理（axioms）</strong>，灵魂注入，ho！</p>
+<hr>
+<h3 id="等式约束equations">等式约束（Equations）</h3>
+\[ \pi_1(a,b)=a \]\[ \pi_2(a,b)=b \]<ul>
+<li>在范畴论，相当于图示：</li>
+</ul>
+<pre tabindex="0"><code>\documentclass{article}
+\usepackage{amsmath, amssymb}
+\usepackage{tikz-cd}
+
+\begin{document}
+
+\[
+\begin{tikzcd}
+  &amp; Q \arrow[dl, &#34;a&#34;&#39;] \arrow[d, &#34;{(a,b)}&#34;] \arrow[dr, &#34;b&#34;] &amp; \\
+  A &amp; \ P \ \arrow[l, &#34;\pi_1&#34;] \arrow[r, &#34;\pi_2&#34;&#39;] &amp; B
+\end{tikzcd}
+\]
+
+\end{document}
+</code></pre>\[(\pi_1(u),\pi_2(u))=u\]<ul>
+<li>这体现了唯一性。</li>
+</ul>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>笛卡尔积的简明定义可参考 <em>The Joy of Abstraction</em> P.245：Let \(A\) and \(B\) be sets. Then the <em>cartesian product</em> \(A \times B\) is the set defined by \( A \times B = \{(a, b) \mid a \in A, \, b \in B\} \).
+The elements \((a, b)\) are called <em>ordered pairs</em>, and there are functions \(p\) and \(q\) as shown on the right called <em>projections</em>, sending
+an element \((a, b)\) to \(a\) and \(b\) respectively. 为了配合类型论的后文，我在书写上作了自己的改动。例如，我用 \( P \) 代替 \( A \times B \)，以强调把笛卡尔积看作一个整体，即一个类型，或一个范畴的对象，暂且不去考虑它内部更多的细节和意义，就像画人的时候先不去考虑五官的细节和意义，只勾出最简单的外轮廓。&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>按照库拉托夫斯基（Kuratowski）定义，有序对 $(a, b)$ 可以定义为\( (a, b) = \{\{a\}, \{a, b\}\} \)，用集合嵌套的形式来表示有序对的序。特别地，当 \(a = b\) ，例如有序对 \( (2,2) \) ，则可表示为 \( \{\{2\}\} \)，因为 \( (2,2) = \{\{2\}, \{2,2\}\} = \{\{2\}, \{2\}\}\) ，而 \( \{\{2\}, \{2\}\}\) 又可化简为 \( \{\{2\}\} \)。&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p>这里的“初始化（Initialization）”是我自创的一个词。<em>Andrej Bauer</em> 似乎并未给这个步骤命名，直接称为 Contruction。&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:4">
+<p>我没办法严格区分 functions、mappings、operations、constructions，我暂且把它们视为近义词甚至同义词。我出于自己的理解和习惯在相应语境下使用它们：如果强调计算规则，用 &ldquo;function&rdquo;（函数）；如果强调集合间的关系，用 &ldquo;mapping&rdquo;（映射）；如果强调对元素的操作，用 &ldquo;operation&rdquo;（运算）；如果强调如何创建新对象，用 &ldquo;construction&rdquo;（构造）。而在类型论语境，我会更多使用&quot;construction&quot;。&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:5">
+<p>这里是一个我把数学与现象学结合的脑洞。区分“躯体（Körper）“与”活生生的身体（Leib）”的说法，主要来自胡塞尔（Edmund Husserl）的现象学研究；后被梅洛-庞蒂（Maurice Merleau-Ponty）在《知觉现象学》（Phénoménologie de la perception）中进一步发展。“Leib”不仅是物理上的身体，而且是体验世界的主体，具有感知、意向性和运动能力，而“Körper”只是作为客体存在的身体，与外部世界的物理对象无异。关于这些，我是从扎哈维（Dan Zahavi）的《现象学入门》（Phenomenology: The Basics）首次接触的。&#160;<a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M4 0h8s2 0 4 2l15 15s2 2 0 4L21 31s-2 2-4 0L2 16s-2-2-2-4V3s0-3 4-3m3 10a3 3 0 0 0 0-6 3 3 0 0 0 0 6"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/set/" rel="tag">Set</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/type/" rel="tag">Type</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/category/" rel="tag">Category</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+
+
+
+			</div>
+			<aside class="sidebar">
+<div class="widget-categories widget">
+	<h4 class="widget__title">Categories</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/mathematics/">Mathematics</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/tech-tips/">Tech-Tips</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/web-dev/">Web-Dev</a></li>
+		</ul>
+	</div>
+</div>
+<div class="widget-taglist widget">
+	<h4 class="widget__title">Tags</h4>
+	<div class="widget__content">
+		<a class="widget-taglist__link widget__link btn" href="/tags/category/" title="Category">Category</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/git/" title="Git">Git</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/github-pages/" title="Github Pages">Github Pages</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/hugo/" title="Hugo">Hugo</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/latex/" title="LaTeX">LaTeX</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/llm/" title="LLM">LLM</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/set/" title="Set">Set</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/type/" title="Type">Type</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/typst/" title="Typst">Typst</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/vpn/" title="VPN">VPN</a>
+	</div>
+</div>
+</aside>
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2025 MathAgape.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script>
+  MathJax = {
+    tex: {
+      displayMath: [['\\[', '\\]'], ['$$', '$$']],  
+      inlineMath: [['\\(', '\\)']]                  
+    },
+    loader:{
+      load: ['ui/safe']
+    },
+  };
+</script>
+
+</body>
+</html>

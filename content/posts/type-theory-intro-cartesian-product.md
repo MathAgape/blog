@@ -7,11 +7,11 @@ tags = ["Set", "Type", "Category"]
 
 非常感谢一位朋友推荐的类型论入门课程[MAT-FORMATH by *Andrej Bauer*](https://www.youtube.com/playlist?list=PL-47DDuiZOMDBfb5t8Hd30utd_TopoQLE)，其中第一集([2024-10-04 Type theory](https://www.youtube.com/watch?v=OEGXNEPddYw&t=2305s))以**笛卡尔积**为例子，通俗易懂地讲解了类型论、集合论、范畴论的微妙关联。
 
-也非常感谢这位朋友之前推荐的范畴论入门书籍**The Joy of Abstraction** by *Eugenia Cheng*。
+也非常感谢这位朋友之前推荐的范畴论入门书籍**The Joy of Abstraction** by *Eugenia Cheng* 以及网站 [nLab](https://ncatlab.org/nlab/show/HomePage)。
 
 以上就是本文的主要参考来源。感谢这些数学工作者的无私分享，他们没有故意建起知识的护城河，而是为初学者打破了第一道信息壁垒。
 
-本文很多内容为自己的初学思考，并不足够严谨，仅供参考。
+本文内容为自己的初学思考笔记，并不足够严谨，仅供参考。
 
 <!--more-->
 
@@ -77,7 +77,8 @@ tags = ["Set", "Type", "Category"]
 
 - 这表示：如果 \(a\) 是 \(A\) 的元素，\(b\) 是 \(B\) 的元素，那么我们可以**构造**一个有序对 \((a, b)\)，它属于 \(A \times B\)。
 - 在编程中， \((a, b)\) 可被写作形如`pair(a,b)`的前缀形式。
-- 在范畴论，相当于图示：
+- 在范畴论，相当于图示：![配对](https://mathagape.github.io/blog/images/cartesian-product-category-1-pairing.png)
+
 ```
 \documentclass{article}
 \usepackage{amsmath, amssymb}
@@ -102,6 +103,7 @@ tags = ["Set", "Type", "Category"]
 - 这表示：如果 \(u\) 是 \(P\) 的一个元素（即某个 \((a, b)\)），那么我们可以通过投影**构造**（提取）出它的第一个分量 \(\pi_1(u)\) 和第二个分量 \(\pi_2(u)\)，分别属于 \(A\) 和 \(B\) 。
 - 在编程中， \(\pi_1(u)\) 、\(\pi_2(u)\) 可被写作形如`proj_1(u)`、`proj_2(u)`的前缀形式。
 - 在范畴论，相当于图示：
+![](https://mathagape.github.io/blog/images/cartesian-product-category-2-projections.png)
 ```
 \documentclass{article}
 \usepackage{amsmath, amssymb}
@@ -136,7 +138,13 @@ tags = ["Set", "Type", "Category"]
 \[ \pi_1(a,b)=a \]
 \[ \pi_2(a,b)=b \]
 
-- 在范畴论，相当于图示：
+- 这体现了存在性。
+
+\[(\pi_1(u),\pi_2(u))=u\]
+
+- 这体现了唯一性。
+
+- 在范畴论，相当于图示：![](https://mathagape.github.io/blog/images/cartesian-product-category-axioms.png)
 ```
 \documentclass{article}
 \usepackage{amsmath, amssymb}
@@ -153,10 +161,6 @@ tags = ["Set", "Type", "Category"]
 
 \end{document}
 ```
-
-\[(\pi_1(u),\pi_2(u))=u\]
-
-- 这体现了唯一性。
 
 [^1]: 笛卡尔积的简明定义可参考 *The Joy of Abstraction* P.245：Let \(A\) and \(B\) be sets. Then the *cartesian product* \(A \times B\) is the set defined by \( A \times B = \{(a, b) \mid a \in A, \, b \in B\} \).
 The elements \((a, b)\) are called *ordered pairs*, and there are functions \(p\) and \(q\) as shown on the right called *projections*, sending
