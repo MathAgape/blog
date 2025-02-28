@@ -7,11 +7,11 @@ tags = ["Type Theory", "Category Theory"]
 
 非常感谢一位朋友推荐的类型论入门课程[MAT-FORMATH by *Andrej Bauer*](https://www.youtube.com/playlist?list=PL-47DDuiZOMDBfb5t8Hd30utd_TopoQLE)，第一集([2024-10-04 Type theory](https://www.youtube.com/watch?v=OEGXNEPddYw&t=2305s))以**笛卡尔积**为例子，让我首次触摸到了类型论、集合论、范畴论的微妙关联。
 
-也非常感谢这位朋友之前推荐的范畴论入门书籍**The Joy of Abstraction** by *Eugenia Cheng* 以及网站 [nLab](https://ncatlab.org/nlab/show/HomePage)。
+也非常感谢这位朋友之前推荐的范畴论入门书籍 **The Joy of Abstraction** by *Eugenia Cheng* 以及网站 [nLab](https://ncatlab.org/nlab/show/HomePage)。
 
 如果没有这些无私分享，我是绝无可能了解到这么新颖有趣的数学。感谢他们没有故意建起知识的护城河，而是为初学者打破了第一道信息壁垒。
 
-结合以上参考资料，我写下了这篇学习笔记。初学思考，严谨不足，仅供交流。
+结合以上参考资料，我写下了这篇学习笔记。初学思考，严谨不足，仅供交流。文末附有**后记**，简述了我作为业余自学数学的心路历程。
 
 <!--more-->
 
@@ -194,6 +194,26 @@ tags = ["Type Theory", "Category Theory"]
 通过这样一番探索，我们可以发现，我们似乎总用不同的方式来诉说同一个数学本质，类型论、计算机代码、集合论、范畴论，就好像各种语言变体，我愿称之为方言（dialects），每一种方言都在显示本质的某一侧。[^7] 
 
 类型论与计算机代码有一种更自然的相通，是一种非常便于计算（compute）的形式化方法，这为后面 LEAN 的辅助证明打下了基础。
+
+---
+
+### 后记
+
+我几乎快要遗忘，我第一次对数学产生强烈好奇的那个下午，当我看到第三次数学危机这一概念，就冒出一个念头：除了集合论，还有别的**什么论**吗？我用自己的办法搜遍全网，也没有找到答案。那会我对数学一无所知，只是好奇，想要看看更大的世界。
+
+后来我开始艰难地自学数学，这对于一个本科是美术的人来说，着实困难。书都是靠着搜索随缘找的，一开始是看微积分，看不懂，然后看数学分析，还是看不懂，然后再看点集拓扑，终于有点头绪。那会我尝试在 Bilibili 做讲解数学的视频，因为我实在没办法，我周围没有一个能交流数学的人，只能这样自己当自己的老师，自娱自乐。（这些视频目前已经不在了，我删除了它们）
+
+但我还是惦记着那个起初的问题：除了集合论，还有别的**什么论**吗？
+
+看我视频的人多起来，和我交流的人也多起来。直到一位朋友推荐我阅读一本新书， **The Joy of Abstraction** ，这是一本**范畴论**的入门书，彻底刷新了我对数学的认知。
+
+后来，我看数学实在累了，就转而学习计算机了。LISP 的方言 Scheme 是我人生所学的第一门计算机语言，参考书是经典的SICP，即《计算机程序的构造和解释》（Structure and Interpretation of Computer Programs）。在这本书中，我接触到 Lambda 演算。然后，我又冒出一个念头：我能不能自己写出一个程序，可以验证我的习题答案是否正确，甚至能为我搜寻证明所需要的条件？
+
+我尝试过很多办法，甚至有一瞬间又想到那个起初的问题：除了集合论，还有别的**什么论**吗？
+
+直到那位朋友又为我推荐了视频教程 [MAT-FORMATH by *Andrej Bauer*](https://www.youtube.com/playlist?list=PL-47DDuiZOMDBfb5t8Hd30utd_TopoQLE)，让我试试了解**类型论**与 LEAN。当时我对这些还一无所直，但我有一种极为强烈的直觉，就是这个了！
+
+果然，就是这个。
 
 [^1]: 我写这个笛卡尔积的定义参考了 *The Joy of Abstraction* P.245，原文如下：Let \(A\) and \(B\) be sets. Then the *cartesian product* \(A \times B\) is the set defined by \( A \times B = \{(a, b) \mid a \in A, \, b \in B\} \).
 The elements \((a, b)\) are called *ordered pairs*, and there are functions \(p\) and \(q\) as shown on the right called *projections*, sending
