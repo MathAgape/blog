@@ -11,7 +11,7 @@ tags = ["Type Theory", "Category Theory"]
 
 如果没有这些无私分享，我是绝无可能了解到这么新颖有趣的数学。感谢他们没有故意建起知识的护城河，而是为初学者打破了第一道信息壁垒。
 
-结合以上参考资料，我写下了这篇学习笔记。初学思考，严谨不足，仅供交流。文末附有**后记**，简述了我作为业余自学数学的心路历程。
+结合以上参考资料，我写下了这篇学习笔记。初学思考，严谨不足，仅供交流。文末附有**后记**，简述了我业余自学数学的奇妙旅程。
 
 <!--more-->
 
@@ -25,7 +25,7 @@ tags = ["Type Theory", "Category Theory"]
 
 其中的元素 \((a, b)\) 称为**有序对（ordered pair）**。
 
-此外注意到，当笛卡尔积的定义写下，就已经暗示了集合 \( P \) 配有两个自然**投影（projections）** \(\pi_1\) 和 \(\pi_2\) ：\( \pi_1: A \times B \to A\)，\(\pi_2: A \times B \to B \)；其中， \(\pi_1(a, b) = a\)，\(\pi_2(a, b) = b\)。
+注意到，当笛卡尔积的定义写下，就已经暗示了集合 \( P \) 配有两个自然**投影（projections）** \(\pi_1\) 和 \(\pi_2\) ：\( \pi_1: A \times B \to A\)，\(\pi_2: A \times B \to B \)；其中， \(\pi_1(a, b) = a\)，\(\pi_2(a, b) = b\)。
 
 ---
 
@@ -120,7 +120,7 @@ tags = ["Type Theory", "Category Theory"]
 - 类型论：如果 \(u\) 的类型是 \(P\)，那么 \(\pi_1(u)\) 的类型是 \(A\)。
 - 编程： \(\pi_1(u)\) 、\(\pi_2(u)\) 可被写作形如`proj_1(u)`、`proj_2(u)`的前缀形式。
 - 集合论：对于有序对 \((a, b)\) 总能通过投影\(\pi_1\) 、\(\pi_2\) 提取出它的第一个分量 \(\pi_1(a, b)\) 和第二个分量 \(\pi_2(a, b)\)，分别属于 \(A\) 和 \(B\) 。
-- 范畴论：\( P \in \mathcal{C} \Rightarrow \pi_1: P \to A, \pi_2: P \to B\)。
+- 范畴论：\(\pi_1: P \to A\) ， \(\pi_2: P \to B\)。
 
 ![](https://mathagape.github.io/blog/images/cartesian-product-category-2-projections.png)
 
