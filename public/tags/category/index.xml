@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Category on MathAgape</title>
+    <link>http://localhost:1313/tags/category/</link>
+    <description>Recent content in Category on MathAgape</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 28 Feb 2025 13:45:53 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/category/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>范畴论例子：笛卡尔积</title>
+      <link>http://localhost:1313/posts/title/</link>
+      <pubDate>Fri, 28 Feb 2025 13:45:53 +0800</pubDate>
+      <guid>http://localhost:1313/posts/title/</guid>
+      <description>&lt;p&gt;我们通常这样定义&lt;strong&gt;笛卡尔积&lt;/strong&gt;：&#xA;Let \(A\) and \(B\) be sets. Then the &lt;em&gt;cartesian product&lt;/em&gt; \(A \times B\) is the set defined by \( A \times B = \{(a, b) \mid a \in A, \, b \in B\} \).&lt;/p&gt;&#xA;&lt;p&gt;The elements \((a, b)\) are called &lt;em&gt;ordered pairs&lt;/em&gt;, and there are functions \(p\) and \(q\) as shown on the right called &lt;em&gt;projections&lt;/em&gt;, sending&#xA;an element \((a, b)\) to \(a\) and \(b\) respectively.&lt;/p&gt;&#xA;&lt;p&gt;But this is an equality between objects in a category: we should be asking about isomorphisms.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
