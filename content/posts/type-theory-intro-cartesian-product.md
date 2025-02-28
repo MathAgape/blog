@@ -5,27 +5,27 @@ categories = ["Mathematics"]
 tags = ["Type Theory", "Category Theory"]
 +++
 
-非常感谢一位朋友推荐的类型论入门课程[MAT-FORMATH by *Andrej Bauer*](https://www.youtube.com/playlist?list=PL-47DDuiZOMDBfb5t8Hd30utd_TopoQLE)，第一集([2024-10-04 Type theory](https://www.youtube.com/watch?v=OEGXNEPddYw&t=2305s))以**笛卡尔积**为例子，通俗易懂地讲解了类型论、集合论、范畴论的微妙关联。
+非常感谢一位朋友推荐的类型论入门课程[MAT-FORMATH by *Andrej Bauer*](https://www.youtube.com/playlist?list=PL-47DDuiZOMDBfb5t8Hd30utd_TopoQLE)，第一集([2024-10-04 Type theory](https://www.youtube.com/watch?v=OEGXNEPddYw&t=2305s))以**笛卡尔积**为例子，让我首次触摸到了类型论、集合论、范畴论的微妙关联。
 
 也非常感谢这位朋友之前推荐的范畴论入门书籍**The Joy of Abstraction** by *Eugenia Cheng* 以及网站 [nLab](https://ncatlab.org/nlab/show/HomePage)。
 
-如果没有这些无私分享，我是绝无可能触摸到现代数学的门槛的。感谢他们没有故意建起知识的护城河，而是为初学者打破了第一道信息壁垒。
+如果没有这些无私分享，我是绝无可能了解到这么新颖有趣的数学。感谢他们没有故意建起知识的护城河，而是为初学者打破了第一道信息壁垒。
 
-结合以上参考资料，我写下了这篇笔记。初学思考，并不严谨，仅供交流。
+结合以上参考资料，我写下了这篇学习笔记。初学思考，严谨不足，仅供交流。
 
 <!--more-->
 
 ---
 
-我们**通常**这样定义笛卡尔积[^1]：
+我们**通常**这样定义笛卡尔积：
 
-设\(A\)和\(B\)为两个集合。**笛卡尔积（cartesian product）** 被定义为集合：
+设\(A\)和\(B\)为两个集合。**笛卡尔积（cartesian product）** 被定义为集合[^1]：
 
-\[ P = \{(a, b) \mid a \in A, \, b \in B\} \]
+\[ A \times B = \{(a, b) \mid a \in A, \, b \in B\} \]
 
-其中的元素 \((a, b)\) 称为**有序对（ordered pair）**。\( P \) 通常被记作 \( A \times B \)。
+其中的元素 \((a, b)\) 称为**有序对（ordered pair）**。
 
-此外要注意到，当笛卡尔积的定义写下，就已经暗示了集合 \( P \) 配有两个自然**投影（projections）** \(\pi_1\)和\(\pi_2\)：\( \pi_1: A \times B \to A\)，\(\pi_2: A \times B \to B \)；其中， \(\pi_1(a, b) = a\)，\(\pi_2(a, b) = b\)。
+此外注意到，当笛卡尔积的定义写下，就已经暗示了集合 \( P \) 配有两个自然**投影（projections）** \(\pi_1\) 和 \(\pi_2\) ：\( \pi_1: A \times B \to A\)，\(\pi_2: A \times B \to B \)；其中， \(\pi_1(a, b) = a\)，\(\pi_2(a, b) = b\)。
 
 ---
 
@@ -33,22 +33,22 @@ tags = ["Type Theory", "Category Theory"]
 
 \[ \forall x \, ( x \in A \times B \leftrightarrow \exists a \, \exists b \, (a \in A \land b \in B \land x = \{\{a\}, \{a, b\}\})) \]
 
-其中，用 \( \{a, b\} \) 表示有序对，是基于库拉托夫斯基（Kuratowski）定义[^2]。
+其中，用嵌套的集合表示有序对，是基于库拉托夫斯基（Kuratowski）定义[^2]。
 
 ---
 
 以上是经典**集合论**和**数理逻辑**思维下的定义。
 但这样定义还不够自然——尤其是在使用计算机实现辅助证明时。因此，我们需要引入**类型论**，作为一种新的数学形式化（formalism）方法。
 
-下面我们先来看看**类型论**怎样表示笛卡尔积的定义：
+笛卡尔积可用**类型论**的语言表示为如下五步[^3]：
 
-1. **初始化（Initialization）**[^3]
+1. **初始化（Initialization）**
 
 \[ \frac{\vdash A : Type \quad \vdash B : Type}{\vdash P : Type}\]
 
 2. **配对（Pairing）**
 
-\[ \frac{\vdash a : A \quad \vdash b : B}{\vdash (a,b) : P} \]
+\[ \frac{\vdash a : A \quad \vdash b : B}{\vdash u : P} \]
 
 3. **投影（Projections）**
 
@@ -57,37 +57,42 @@ tags = ["Type Theory", "Category Theory"]
 
 4. **等式约束1（Equations 1）** 
 
-\[ \pi_1(a,b)=a \]
-\[ \pi_2(a,b)=b \]
+\[ \pi_1 (u)=a \]
+\[ \pi_2 (u)=b \]
 
 5. **等式约束2（Equations 2）**
 
-\[ (\pi_1(u),\pi_2(u))=u \]
+\[ (\pi_1 (u),\pi_2 (u))=u \]
+
+其中，\( P \) 就是笛卡尔积 \( A \times B \)，\( u \) 就是有序对 \( (a,b) \)[^4]。
 
 ---
 
 ## 构造（constructions）
 
-前三条叙述了定义笛卡尔积所涉及的三种构造（constructions）。[^4] 
+前三条叙述了定义笛卡尔积所涉及的三种**构造（constructions）**。[^5]
 
 ---
 
 ### 构造：初始化（Initialization）
 \[ \frac{\vdash A : Type \quad \vdash B : Type}{\vdash P : Type}\]
 
-- 意义：如果 \(A\) 和 \(B\) 是类型（Type），那么它们的笛卡尔积 \(P\) 也是一个类型。也就是说，笛卡尔积类型是一个新的类型，由两个给定的类型**构造**而成。
-- 编程：\(P\) 即 \(A \times B\) 可被写作形如`prod(A,B)`的前缀形式。
-- 范畴论表示：\( A, B \in \mathcal{C} \Rightarrow P \in \mathcal{C} \)。
+- 这串公式用自然语言说，就是：如果 \(A\) 和 \(B\) 是类型，那么它们的笛卡尔积 \(P\) 也是一个类型，它是基于类型 \(A\) 和 \(B\) 生成的新类型。
+- 在编程中，\(P\) 即 \(A \times B\) 可被写作形如`prod(A,B)`的前缀形式。
+- 在集合论，就是：\(A\) 和 \(B\) 是集合，它们的笛卡尔积 \( A \times B \) 也是一个集合。
+- 在范畴论，就是：\( A, B \in \mathcal{C} \Rightarrow P \in \mathcal{C} \)。
 
 ---
 
 ### 构造：配对（Pairing）
-\[ \frac{\vdash a : A \quad \vdash b : B}{\vdash (a,b) : P} \]
+\[ \frac{\vdash a : A \quad \vdash b : B}{\vdash u : P} \]
 
-- 意义：如果 \(a\) 是 \(A\) 的元素，\(b\) 是 \(B\) 的元素，那么我们可以**构造**一个有序对 \((a, b)\)，它属于 \(A \times B\)。
-- 编程：\((a, b)\) 可被写作形如`pair(a,b)`的前缀形式。
-- 范畴论表示：\( Q \in \mathcal{C} \Rightarrow (a,b): Q \to P\)。
-- 范畴论图示：![配对](https://mathagape.github.io/blog/images/cartesian-product-category-1-pairing.png)
+- 类型论：如果 \(a\) 的类型是 \(A\)，\(b\) 的类型是 \(B\) ，那么 \(u\) 的类型是 \(P\)。
+- 编程：\(u\) 即 \((a, b)\) 可被写作形如`pair(a,b)`的前缀形式。
+- 集合论：如果 \(a\) 是 \(A\) 的元素，\(b\) 是 \(B\) 的元素，那么 \(u\) 是 \((a, b)\) 的元素。
+- 范畴论：\( Q \in \mathcal{C} \Rightarrow u: Q \to P\)。
+
+![](https://mathagape.github.io/blog/images/cartesian-product-category-1-pairing.png)
 
 ```
 \documentclass{article}
@@ -98,7 +103,7 @@ tags = ["Type Theory", "Category Theory"]
 
 \[
 \begin{tikzcd}
-  & Q \arrow[dl, "a"'] \arrow[d, "{(a,b)}"] \arrow[dr, "b"] & \\ 
+  & Q \arrow[dl, "a"'] \arrow[d, "{u}"] \arrow[dr, "b"] & \\ 
   A & P & B
 \end{tikzcd}
 \]
@@ -112,12 +117,13 @@ tags = ["Type Theory", "Category Theory"]
 \[ \frac{\vdash u : P}{\vdash \pi_1(u) : A} \]
 \[ \frac{\vdash u : P}{\vdash \pi_2(u) : B} \]
 
-- 这两个公式的意义是，如果 \(u\) 是 \(P\) 的一个元素（即某个 \((a, b)\)），那么我们可以通过投影**构造**（提取）出它的第一个分量 \(\pi_1(u)\) 和第二个分量 \(\pi_2(u)\)，分别属于 \(A\) 和 \(B\) 。
-- 在编程中， \(\pi_1(u)\) 、\(\pi_2(u)\) 可被写作形如`proj_1(u)`、`proj_2(u)`的前缀形式。
-- 范畴论表示：\( P \in \mathcal{C} \Rightarrow \pi_1: P \to A, \pi_2: P \to B\)。
-- 范畴论图示：![](https://mathagape.github.io/blog/images/cartesian-product-category-2-projections.png)
+- 类型论：如果 \(u\) 的类型是 \(P\)，那么 \(\pi_1(u)\) 的类型是 \(A\)。
+- 编程： \(\pi_1(u)\) 、\(\pi_2(u)\) 可被写作形如`proj_1(u)`、`proj_2(u)`的前缀形式。
+- 集合论：对于有序对 \((a, b)\) 总能通过投影\(\pi_1\) 、\(\pi_2\) 提取出它的第一个分量 \(\pi_1(a, b)\) 和第二个分量 \(\pi_2(a, b)\)，分别属于 \(A\) 和 \(B\) 。
+- 范畴论：\( P \in \mathcal{C} \Rightarrow \pi_1: P \to A, \pi_2: P \to B\)。
 
-- 这里有两个交换三角形（triangle commutes）。
+![](https://mathagape.github.io/blog/images/cartesian-product-category-2-projections.png)
+
 ```
 \documentclass{article}
 \usepackage{amsmath, amssymb}
@@ -127,7 +133,7 @@ tags = ["Type Theory", "Category Theory"]
 
 \[
 \begin{tikzcd}
-  & Q \arrow[d, "{t}"] & \\ 
+  & Q \arrow[d, "{u}"] & \\ 
   A & \ P \ \arrow[l, "\pi_1"] \arrow[r, "\pi_2"'] & B
 \end{tikzcd}
 \]
@@ -139,7 +145,7 @@ tags = ["Type Theory", "Category Theory"]
 
 ## 公理（Axioms）
 
-但若仅仅只有构造，一切还都只是初步的框架，一些空壳符号的连接，意义还尚未成形。ho，就好像一具人的躯体（Körper），而非一个活生生的身体（Leib）[^5]，它缺少灵魂！
+但若仅仅只有构造，一切还都只是初步的框架，一些空壳符号的连接，意义还尚未成形。ho，就好像一具人的躯体（Körper），而非一个活生生的身体（Leib）[^6]，它缺少灵魂！
 
 而等式（equations）是代数（algebra）思维的重要观念。
 
@@ -149,14 +155,15 @@ tags = ["Type Theory", "Category Theory"]
 
 ### 等式约束1（Equations 1）
 
-\[ \pi_1(a,b)=a \]
-\[ \pi_2(a,b)=b \]
+\[ \pi_1 (u) = a \]
+\[ \pi_2 (u) = b \]
 
-- 这两个公式的意义是，对任意有序对总是**存在（exist）** 投影。
-- 对应范畴论**泛性质（universal properties）**中的**存在性（existence）**。
-- 范畴论图示：![](https://mathagape.github.io/blog/images/cartesian-product-category-axioms.png)
+这两个等式为结构赋予意义：对任意有序对总是**存在（exist）** 投影。
+对应范畴论**泛性质（universal properties）**中的**存在性（existence）**。
 
-- 直观可见，这两个等式形成了两个**交换三角形（triangle commutes）**。
+![](https://mathagape.github.io/blog/images/cartesian-product-category-axioms.png)
+
+直观可见，这两个等式形成了两个**交换三角形（triangle commutes）**。
 ```
 \documentclass{article}
 \usepackage{amsmath, amssymb}
@@ -166,7 +173,7 @@ tags = ["Type Theory", "Category Theory"]
 
 \[
 \begin{tikzcd}
-  & Q \arrow[dl, "a"'] \arrow[d, "{(a,b)}"] \arrow[dr, "b"] & \\
+  & Q \arrow[dl, "a"'] \arrow[d, "{u}"] \arrow[dr, "b"] & \\
   A & \ P \ \arrow[l, "\pi_1"] \arrow[r, "\pi_2"'] & B
 \end{tikzcd}
 \]
@@ -179,13 +186,19 @@ tags = ["Type Theory", "Category Theory"]
 
 \[(\pi_1(u),\pi_2(u))=u\]
 
-- 这个公式的意义是，有序对的分解总是**唯一（unique）**。
-- 对应范畴论**泛性质（universal properties）**中的**唯一性（uniqueness）**。
+这两个等式为结构赋予意义：有序对的分解总是**唯一（unique）**。
+对应范畴论**泛性质（universal properties）**中的**唯一性（uniqueness）**。
 
-[^1]: 笛卡尔积的简明定义可参考 *The Joy of Abstraction* P.245：Let \(A\) and \(B\) be sets. Then the *cartesian product* \(A \times B\) is the set defined by \( A \times B = \{(a, b) \mid a \in A, \, b \in B\} \).
+---
+
+通过这样一番探索，我们可以发现，我们似乎总用不同的方式来诉说同一个数学本质，类型论、计算机代码、集合论、范畴论，就好像各种语言变体，我愿称之为方言（dialects）。[^7] 而类型论与计算机代码有一种更自然的相通，这为后面 LEAN 的辅助证明打下了基础。
+
+[^1]: 我写这个笛卡尔积的定义参考了 *The Joy of Abstraction* P.245，原文如下：Let \(A\) and \(B\) be sets. Then the *cartesian product* \(A \times B\) is the set defined by \( A \times B = \{(a, b) \mid a \in A, \, b \in B\} \).
 The elements \((a, b)\) are called *ordered pairs*, and there are functions \(p\) and \(q\) as shown on the right called *projections*, sending
-an element \((a, b)\) to \(a\) and \(b\) respectively. 为了配合类型论的后文，我在书写上作了自己的改动。例如，我用 \( P \) 代替 \( A \times B \)，以强调把笛卡尔积看作一个整体，即一个类型，或一个范畴的对象，暂且不去考虑它内部更多的细节和意义，就像画人的时候先不去考虑五官的细节和意义，只勾出最简单的外轮廓。
-[^2]: 按照库拉托夫斯基（Kuratowski）定义，有序对 $(a, b)$ 可以定义为\( (a, b) = \{\{a\}, \{a, b\}\} \)，用集合嵌套的形式来表示有序对的序。特别地，当 \(a = b\) ，例如有序对 \( (2,2) \) ，则可表示为 \( \{\{2\}\} \)，因为 \( (2,2) = \{\{2\}, \{2,2\}\} = \{\{2\}, \{2\}\}\) ，而 \( \{\{2\}, \{2\}\}\) 又可化简为 \( \{\{2\}\} \)。
-[^3]: 这里的“初始化（initialization）”一词，以及为 equations 分组，是我在整理思路过程中的自创。*Andrej Bauer* 的视频教程 ([2024-10-04 Type theory](https://www.youtube.com/watch?v=OEGXNEPddYw&t=2305s)) 中并未给这个步骤命名，直接称为 contruction，也并未给 equations 分组。
-[^4]: 在我眼里，functions、mappings、operations、constructions 本质上是同义词，是不同语境下的显现。我出于自己的理解和习惯在相应语境下使用它们：如果强调计算规则，用 "function"（函数）；如果强调集合间的关系，用 "mapping"（映射）；如果强调对元素的操作，用 "operation"（运算）；如果强调如何创建新对象，用 "construction"（构造）。而在类型论语境，我会更多使用"construction"。
-[^5]: 这里是一个我把数学与现象学结合的脑洞。区分“躯体（Körper）“与”活生生的身体（Leib）”的说法，主要来自胡塞尔（Edmund Husserl）的现象学研究；后被梅洛-庞蒂（Maurice Merleau-Ponty）在《知觉现象学》（Phénoménologie de la perception）中进一步发展。“Leib”不仅是物理上的身体，而且是体验世界的主体，具有感知、意向性和运动能力，而“Körper”只是作为客体存在的身体，与外部世界的物理对象无异。关于这些，我是从扎哈维（Dan Zahavi）的《现象学入门》（Phenomenology: The Basics）首次接触的。
+an element \((a, b)\) to \(a\) and \(b\) respectively. 
+[^2]: 按照库拉托夫斯基（Kuratowski）定义，有序对 \((a, b)\) 可以定义为\( (a, b) = \{\{a\}, \{a, b\}\} \)，用集合嵌套的形式来表示有序对的序。特别地，当 \(a = b\) ，例如有序对 \( (2,2) \) ，则可表示为 \( \{\{2\}\} \)，因为 \( (2,2) = \{\{2\}, \{2,2\}\} = \{\{2\}, \{2\}\}\) ，而 \( \{\{2\}, \{2\}\}\) 又可化简为 \( \{\{2\}\} \)。
+[^3]: 我写这五步参考了 *Andrej Bauer* 的视频教程 ([2024-10-04 Type theory](https://www.youtube.com/watch?v=OEGXNEPddYw&t=2305s)) 。；“初始化（initialization）”一词，以及为 equations 分组，是我在整理思路过程中的自创。原教程中并未给这个步骤命名，直接称为 contruction，也并未给 equations 分组。
+[^4]: 我作出符号上这样的代替，这是为了强调，我把笛卡尔积**看作一个整体**，即一个类型，或一个范畴对象，暂且不去考虑它内部更多的细节和意义，就像画画的时候，先不去考虑细节和意义，只用最简单的基础形状起形，等到大关系的构造完成，再向内填充细节和意义。
+[^5]: 在目前语境下，functions、mappings、operations、constructions 可视为同义词，它们是同一个本质在不同语境下的不同显现。我出于自己的理解和习惯在相应语境下使用它们：如果强调计算规则，用 "function"（函数）；如果强调集合间的关系，用 "mapping"（映射）；如果强调对元素的操作，用 "operation"（运算）；如果强调如何创建新对象，用 "construction"（构造）。而在类型论语境，我会更多使用"construction"。
+[^6]: 这里是一个我把数学与现象学结合的脑洞。区分“躯体（Körper）“与”活生生的身体（Leib）”的说法，主要来自胡塞尔（Edmund Husserl）的现象学研究；后被梅洛-庞蒂（Maurice Merleau-Ponty）在《知觉现象学》（Phénoménologie de la perception）中进一步发展。“Leib”不仅是物理上的身体，而且是体验世界的主体，具有感知、意向性和运动能力，而“Körper”只是作为客体存在的身体，与外部世界的物理对象无异。关于这些，我是从扎哈维（Dan Zahavi）的《现象学入门》（Phenomenology: The Basics）首次接触的。
+[^7]: 在计算机领域，我们经常谈到方言。计算机方言（computer dialect）通常是指一种编程语言或计算机语言的变种或实现，它可能在语法、语义、特性、功能等方面有所不同，但依然保持语言的核心理念或设计原则。类似于自然语言的方言，计算机方言是在某个基本语言或平台上进行的扩展或修改。计算机方言的存在往往是由于需求的不同、实现方式的不同，或是为了适应特定领域或环境的需求。例如 Scheme 和 Racket 都是 LISP 的方言。

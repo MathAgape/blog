@@ -5,7 +5,7 @@ theme = "mainroad"
 
 [[menu.main]]
   name = "Mathematics"
-  url = "/categories/web-dev/"
+  url = "/categories/mathematics/"
   weight = 4
 
 [[menu.main]]
