@@ -6,8 +6,15 @@
     <description>Recent content on MathAgape</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 28 Feb 2025 13:45:53 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 05 Apr 2025 21:40:07 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>语言游戏：从鸡兔同笼到线性代数</title>
+      <link>http://localhost:1313/posts/language-games-chicken-rabbit-linear-algebra/</link>
+      <pubDate>Sat, 05 Apr 2025 21:40:07 +0800</pubDate>
+      <guid>http://localhost:1313/posts/language-games-chicken-rabbit-linear-algebra/</guid>
+      <description>&lt;p&gt;近期在看&lt;a href=&#34;https://www.bilibili.com/video/BV17s411N79m/?share_source=copy_web&amp;amp;vd_source=1d5772988c76f4e7508b89905069d280&amp;amp;t=4308&#34;&gt;龚昇的数学基础选讲&lt;/a&gt;，轻松幽默间把大学的数学基础讲得非常通透。&lt;/p&gt;&#xA;&lt;p&gt;为了讲解线性代数，他提到了鸡兔同笼的例子，并实诚地指出这非常不 make sense，哈哈哈哈，数学人的这种实诚太可爱了！&lt;/p&gt;&#xA;&lt;p&gt;但基于近期入坑的语言哲学，我又同时认为鸡兔同笼也非常 make sense！&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;在数学的语言游戏中，我们并不关心鸡兔是不是真被关在笼里，就像我们并不关心象棋中的马会不会拉屎在棋盘上——ho，正如维特根斯坦表示：意义在于用法！&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;本文作为一篇数学和哲学杂交的脑洞，用作与朋友们交流的跨学科桥梁。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>初识类型论：以笛卡尔积为例 [WIP]</title>
       <link>http://localhost:1313/posts/type-theory-intro-cartesian-product/</link>

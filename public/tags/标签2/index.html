@@ -52,6 +52,13 @@
 			</a>
 		</li>
 		<li class="menu__item">
+			<a class="menu__link" href="/categories/mathematics/">
+				
+				<span class="menu__text">Mathematics</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
 			<a class="menu__link" href="/posts/sample/">
 				
 				<span class="menu__text">文章标题</span>
@@ -111,6 +118,10 @@ $$
 	<div class="widget__content">
 		<ul class="widget__list">
 			<li class="widget__item">
+				<a class="widget__link" href="/categories/mathematics/">Mathematics</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/philosophy/">Philosophy</a></li>
+			<li class="widget__item">
 				<a class="widget__link" href="/categories/tech-tips/">Tech-Tips</a></li>
 			<li class="widget__item">
 				<a class="widget__link" href="/categories/web-dev/">Web-Dev</a></li>
@@ -124,12 +135,17 @@ $$
 <div class="widget-taglist widget">
 	<h4 class="widget__title">Tags</h4>
 	<div class="widget__content">
+		<a class="widget-taglist__link widget__link btn" href="/tags/category-theory/" title="Category Theory">Category Theory</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/git/" title="Git">Git</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/github-pages/" title="Github Pages">Github Pages</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/hugo/" title="Hugo">Hugo</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/latex/" title="LaTeX">LaTeX</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/linear-algebra/" title="Linear Algebra">Linear Algebra</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/llm/" title="LLM">LLM</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/type-theory/" title="Type Theory">Type Theory</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/typst/" title="Typst">Typst</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/vpn/" title="VPN">VPN</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/wittgenstein/" title="Wittgenstein">Wittgenstein</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/%E6%A0%87%E7%AD%BE1/" title="标签1">标签1</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/%E6%A0%87%E7%AD%BE2/" title="标签2">标签2</a>
 	</div>
@@ -152,7 +168,7 @@ $$
   MathJax = {
     tex: {
       displayMath: [['\\[', '\\]'], ['$$', '$$']],  
-      inlineMath: [['\\(', '\\)'], ['$', '$']]                  
+      inlineMath: [['\\(', '\\)']]                  
     },
     loader:{
       load: ['ui/safe']

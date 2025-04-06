@@ -6,8 +6,15 @@
     <description>Recent content in Categories on MathAgape</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 28 Feb 2025 13:45:53 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 05 Apr 2025 21:40:07 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Philosophy</title>
+      <link>http://localhost:1313/categories/philosophy/</link>
+      <pubDate>Sat, 05 Apr 2025 21:40:07 +0800</pubDate>
+      <guid>http://localhost:1313/categories/philosophy/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Mathematics</title>
       <link>http://localhost:1313/categories/mathematics/</link>

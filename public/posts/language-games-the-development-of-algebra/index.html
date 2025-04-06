@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>语言游戏：从鸡兔同笼到线性代数 - MathAgape</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="/css/style.css">
+	
+
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo">
+		<a class="logo__link" href="/" title="MathAgape&#39;s Blog" rel="home">
+			<div class="logo__item logo__text">
+					<div class="logo__title">MathAgape&#39;s Blog</div>
+					<div class="logo__tagline">Mathematics, Computer Science, and Philosophy Study Notes.</div>
+				</div>
+		</a>
+	</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/categories/web-dev/">
+				
+				<span class="menu__text">Web Dev</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/categories/tech-tips/">
+				
+				<span class="menu__text">Tech Tips</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/categories/mathematics/">
+				
+				<span class="menu__text">Mathematics</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">语言游戏：从鸡兔同笼到线性代数</h1>
+			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2025-04-05T21:40:07&#43;08:00">April 05, 2025</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/philosophy/" rel="category">Philosophy</a>
+	</span>
+</div></div>
+		</header>
+		<div class="content post__content clearfix">
+			<p>便于和搞哲学的朋友交流哲学概念而找的数学例子。</p>
+<hr>
+<h2 id="语言游戏意义在于用法">语言游戏：意义在于用法</h2>
+<p>维特根斯坦在其《哲学研究》<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>中，提出了“语言游戏”的概念。并强调<strong>意义在于用法</strong>：
+§43. 在大多数—————尽管不是全部————使用“意义”一词的情况下,我们可以这样解释“意义”这个词:一个词的意义就是它在语言中的<strong>用法（use）</strong><sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>。</p>
+<p>例如，&ldquo;杯子&quot;这个词的意义，不在于它指一个外在物体，而在于我们“用杯子喝水”这一社会实践<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>中，它作为一个“工具符号”的角色。世上原本没有“杯子”这个词，是由于“喝水”这一实践行为不断重复、相似，于是语言中为了方便，就将“那个可以拿来喝水的东西”赋予了一个名字“杯子”。</p>
+<hr>
+<h2 id="从鸡兔同笼到线性代数">从鸡兔同笼到线性代数</h2>
+<h3 id="鸡兔同笼-make-sense-吗">鸡兔同笼 make sense 吗？</h3>
+<p>“鸡兔同笼”问题出自南北朝时期的《孙子算经》：“今有雉兔同笼，上有三十五头，下有九十四足，问雉兔各几何？”。</p>
+<p>假设雉鸡 \(x\) 只，兔子 \(y\) 只。</p>
+\[ \begin{cases} x + y = 35 \\ 2x + 4y = 94 \end{cases} \]<p>诚实地说，这样的数学问题实在不 make sense 。鸡和兔被关在一个笼子里，已经数得清有多少头多少脚，却数不清多少鸡多少兔子。当然，当时还没有发展出符号化作抽象的代数语言，不得不如此。在小学数学教育中，也常用这样的比喻来描述。</p>
+<p>但这其实也 make sense ，因为这本身就是一个语言游戏，因为<strong>意义在于用法</strong>，“鸡”与“兔”、“脚”与“足”、“同笼……有”，其实和方程组中的 \(x\) 与 \(y\)、乘法、加法与等于其实并无任何本质上的区别。我们用“鸡兔”描述的是一个规则体系，而不是关心鸡兔是不是真被关在笼里。就像我们并不关心象棋中的马会不会拉屎在棋盘上，而是只在乎它走“日”形路线。这也好比我买了一个杯子，但我从来没用它喝过水，却一直用来当笔筒；一个深桶状的容器，并不会因它叫“杯子”而被局限于只能喝水。</p>
+<h3 id="线性代数的方言">线性代数的方言</h3>
+<p>起初是解“鸡兔同笼”这样的简单问题，只有两个未知数，但很快人就会想要去解 \(n\) 个变量的 \(n\) 个方程，为了方便，一步步作抽象，自然就会产生各种线性代数的方言。</p>
+<h4 id="方言一展开的矩阵">方言一：展开的矩阵</h4>
+\[ \begin{bmatrix} 1 & 1 \\ 2 & 4 \\ \end{bmatrix} \begin{bmatrix} x \\ y \\ \end{bmatrix} = \begin{bmatrix} 35 \\ 94 \\ \end{bmatrix} \]<h4 id="方言二折叠的矩阵">方言二：折叠的矩阵</h4>
+\[ A\vec{x} = \vec{b} \]<table>
+  <thead>
+      <tr>
+          <th style="text-align: center">\( A = \begin{bmatrix}1 & 1 \\ 2 & 4\end{bmatrix} \)</th>
+          <th style="text-align: center">\( \vec{x} = \begin{bmatrix}x \\ y\end{bmatrix} \)</th>
+          <th style="text-align: center">\( \vec{b} = \begin{bmatrix}35 \\ 94\end{bmatrix} \)</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center">系数矩阵</td>
+          <td style="text-align: center">未知向量（变量向量）</td>
+          <td style="text-align: center">常数向量（右侧向量）</td>
+      </tr>
+  </tbody>
+</table>
+<h4 id="方言三线性变换">方言三：线性变换</h4>
+\[ A\vec{x} = T( \vec{x} ) \]<p>其中，\( T \) 被称为。</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: center">\( T \)</th>
+          <th style="text-align: center">\( \vec{x} = (x,y) \)</th>
+          <th style="text-align: center">\( T( \vec{x} ) = A\vec{x} = (x+y, 2x + 4y) \)</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center">线性映射</td>
+          <td style="text-align: center">原像（输入向量）</td>
+          <td style="text-align: center">像（输出向量）</td>
+      </tr>
+  </tbody>
+</table>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>本文参考的中英译本分别为：《维特根斯坦全集 第8卷（哲学研究）》（河北教育出版社）；<em>Philosophical Investigations</em> (Blackwell Publishing)。&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>对应英文版：43. For a large class of cases though not for all-in which we employ the word &ldquo;meaning&rdquo; it can be defined thus: the meaning of a word is its use in the language.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p>此处我使用“社会实践”体现了语言在社会的互动、规则与约定俗成中形成。&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M4 0h8s2 0 4 2l15 15s2 2 0 4L21 31s-2 2-4 0L2 16s-2-2-2-4V3s0-3 4-3m3 10a3 3 0 0 0 0-6 3 3 0 0 0 0 6"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/linear-algebra/" rel="tag">Linear Algebra</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/wittgenstein/" rel="tag">Wittgenstein</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+
+
+
+			</div>
+			<aside class="sidebar">
+<div class="widget-categories widget">
+	<h4 class="widget__title">Categories</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/mathematics/">Mathematics</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/philosophy/">Philosophy</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/tech-tips/">Tech-Tips</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/web-dev/">Web-Dev</a></li>
+		</ul>
+	</div>
+</div>
+<div class="widget-taglist widget">
+	<h4 class="widget__title">Tags</h4>
+	<div class="widget__content">
+		<a class="widget-taglist__link widget__link btn" href="/tags/category-theory/" title="Category Theory">Category Theory</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/git/" title="Git">Git</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/github-pages/" title="Github Pages">Github Pages</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/hugo/" title="Hugo">Hugo</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/latex/" title="LaTeX">LaTeX</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/linear-algebra/" title="Linear Algebra">Linear Algebra</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/llm/" title="LLM">LLM</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/type-theory/" title="Type Theory">Type Theory</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/typst/" title="Typst">Typst</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/vpn/" title="VPN">VPN</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/wittgenstein/" title="Wittgenstein">Wittgenstein</a>
+	</div>
+</div>
+</aside>
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2025 MathAgape.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script>
+  MathJax = {
+    tex: {
+      displayMath: [['\\[', '\\]'], ['$$', '$$']],  
+      inlineMath: [['\\(', '\\)']]                  
+    },
+    loader:{
+      load: ['ui/safe']
+    },
+  };
+</script>
+
+</body>
+</html>

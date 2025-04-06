@@ -2,22 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2025-04-06T02:18:34+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/</loc>
+    <lastmod>2025-04-06T02:18:34+08:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2025-02-28T13:45:53+08:00</lastmod>
+    <lastmod>2025-04-05T21:40:07+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/linear-algebra/</loc>
+    <lastmod>2025-04-05T21:40:07+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/philosophy/</loc>
+    <lastmod>2025-04-05T21:40:07+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2025-04-05T21:40:07+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/wittgenstein/</loc>
+    <lastmod>2025-04-05T21:40:07+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/language-games-the-development-of-algebra/</loc>
+    <lastmod>2025-04-05T21:40:07+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/category-theory/</loc>
     <lastmod>2025-02-28T13:45:53+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2025-02-28T13:45:53+08:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/categories/mathematics/</loc>
-    <lastmod>2025-02-28T13:45:53+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2025-02-28T13:45:53+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2025-02-28T13:45:53+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/type-theory/</loc>
