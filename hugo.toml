@@ -6,17 +6,22 @@ theme = "mainroad"
 [[menu.main]]
   name = "Mathematics"
   url = "/categories/mathematics/"
-  weight = 4
+  weight = 1
+
+[[menu.main]]
+  name = "Philosophy"
+  url = "/categories/philosophy/"
+  weight = 2
 
 [[menu.main]]
   name = "Web Dev"
   url = "/categories/web-dev/"
-  weight = 2
+  weight = 3
 
 [[menu.main]]
   name = "Tech Tips"
   url = "/categories/tech-tips/"
-  weight = 3
+  weight = 4
 
 [Params.logo]
   image = false
